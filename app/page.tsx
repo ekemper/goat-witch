@@ -9,12 +9,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Landing from './Landing'
 import Header from './Header';
 
+
 export default function Home() {
   return (
 
     <main>
       <Header/>
       <Landing/>
+
         
     </main>
 

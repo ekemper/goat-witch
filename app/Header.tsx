@@ -1,56 +1,47 @@
 'use client'
 
 import React from 'react';
+import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import Offcanvas from 'react-bootstrap/Offcanvas';
+
+const expand = 'sm'
+
+function NavHeader() {
+  return (
+    <>
+      <Navbar fixed="top" key={expand} expand={expand} className="fixed bg-black/[.1] ">
+        <Container fluid>
+          <Navbar.Toggle aria-controls={'offcanvasNavbar-expand'} />
+          <Navbar.Offcanvas
+            aria-labelledby={'offcanvasNavbarLabel-expand'}
+            placement="end"
+          >
+            <Offcanvas.Header closeButton className='bg-slate-500/[.5]'>
+              <Offcanvas.Title>Menu</Offcanvas.Title>
+            </Offcanvas.Header>
+            <Offcanvas.Body className='h-auto bg-slate-500/[.5]'>
+              <Nav className="justify-content-end flex-grow-1 pe-3">
+                <Nav.Link href="#action1">Booking</Nav.Link>
+                <Nav.Link href="#action2">Portfolio</Nav.Link>
+                <Nav.Link href="#action2">Flash</Nav.Link>
+                <Nav.Link href="#action2">About</Nav.Link>
+              </Nav>
+            </Offcanvas.Body>
+          </Navbar.Offcanvas>
+        </Container>
+      </Navbar>
+    </>
+  );
+}
 
 const Header = () => {
-    return (
-        <header>
-
-
-            <Nav className="justify-content-center fixed bg-black/[.4] hover:bg-black/[.6] w-full z-10" activeKey="/home">
-                <Nav.Item>
-                    <Nav.Link href="/home">Active</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link eventKey="link-1">Link</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link eventKey="link-2">Link</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link eventKey="link-3">
-                        link
-                    </Nav.Link>
-                </Nav.Item>
-            </Nav>
-            {/* <nav className="navbar navbar-expand-lg bg-body-tertiary">
-        <div className="container-fluid">
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <div className="navbar-brand">Hidden brand</div>
-
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <div className="nav-link active" aria-current="page">Home</div>
-              </li>
-              <li className="nav-item">
-                <div className="nav-link">Link</div>
-              </li>
-              <li className="nav-item">
-                <div className="nav-link disabled" aria-disabled="true">Disabled</div>
-              </li>
-            </ul>
-            
-          </div>
-        </div>
-      </nav> */}
-
-        </header >
-    )
-
+  return (
+    <header>
+      <NavHeader />
+    </header >
+  )
 }
 
 export default Header
