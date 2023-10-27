@@ -21,12 +21,14 @@ function NavHeader() {
             <Offcanvas.Header closeButton className='bg-slate-500/[.5]'>
               <Offcanvas.Title>Menu</Offcanvas.Title>
             </Offcanvas.Header>
-            <Offcanvas.Body className='h-auto bg-slate-500/[.5]'>
+            <Offcanvas.Body className='h-auto'>
               <Nav className="justify-content-end flex-grow-1 pe-3">
-                <Nav.Link href="#action1">Booking</Nav.Link>
-                <Nav.Link href="#action2">Portfolio</Nav.Link>
-                <Nav.Link href="#action2">Flash</Nav.Link>
-                <Nav.Link href="#action2">About</Nav.Link>
+                <Nav.Link className='text-white my-auto' href="#action1">Booking</Nav.Link>
+                <Nav.Link className='text-white my-auto' href="#action2">Portfolio</Nav.Link>
+                <Nav.Link className='text-white my-auto' href="#action2">Flash</Nav.Link>
+                <Nav.Link className='text-white my-auto' href="#action2">About</Nav.Link>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img className="h-12" src={'/Millennium_Falcon_transparent.png'} alt='Millennium_Falcon'/>
               </Nav>
             </Offcanvas.Body>
           </Navbar.Offcanvas>
