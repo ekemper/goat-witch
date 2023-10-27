@@ -1,5 +1,4 @@
 import React from "react";
-import './Landing.css'
 import Button from 'react-bootstrap/Button';
 import Image from "next/image";
 
@@ -28,18 +27,16 @@ const Jumbotron = () => {
 
 const Landing = () => {
     return (
-        <div className="landing">
-
+        <div className="w-full h-full">
             <video 
                 src={videoSource} 
                 autoPlay muted loop 
-                className="video-bg" 
-                playbackRate={0.5}
+                className="video-bg w-full absolute t-0" 
+                // playbackRate={0.5}  // TODO: EK WTF?
                  />
-            <div className="bg-overlay">
+            {/* <div className="bg-overlay"> */}
                 <Jumbotron />
-
-            </div>
+            {/* </div> */}
 
 
         </div>
