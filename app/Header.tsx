@@ -11,9 +11,9 @@ const expand = 'sm'
 function NavHeader() {
   return (
     <>
-      <Navbar fixed="top" key={expand} expand={expand} className="fixed bg-black/[.1] ">
+      <Navbar fixed="top" key={expand} expand={expand} className="fixed" data-bs-theme="dark">
         <Container fluid>
-          <Navbar.Toggle aria-controls={'offcanvasNavbar-expand'} />
+          <Navbar.Toggle className="text-white" aria-controls={'offcanvasNavbar-expand'} />
           <Navbar.Offcanvas
             aria-labelledby={'offcanvasNavbarLabel-expand'}
             placement="end"

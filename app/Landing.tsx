@@ -11,12 +11,12 @@ const callToAction = 'Book a session'
 
 const Jumbotron = () => {
     return (
-        <div className='bg-black/[.1] relative p-24 md:px-30 flex'>
+        <div className='bg-black/[.1] relative p-4 md:px-30 flex-col'>
 
             {/* eslint-disable-next-line @next/next/no-img-element*/}
-            <img className="w-1/2" src={'/IMG_0302_transparent.png'} alt='Goat Witch' />
+            <img className="w-full mt-12" src={'/IMG_0302_transparent.png'} alt='Goat Witch' />
 
-            <div className="py-36 flex justify-end w-full">
+            <div className="flex justify-center w-full">
                 <h3 className="text-white">{description}</h3>
                 <Button className="mx-auto black">{callToAction}</Button>
             </div>
