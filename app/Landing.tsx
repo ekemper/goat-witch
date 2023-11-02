@@ -16,7 +16,7 @@ const Jumbotron = () => {
             {/* eslint-disable-next-line @next/next/no-img-element*/}
             <img className="w-full mt-12" src={'/IMG_0302_transparent.png'} alt='Goat Witch' />
 
-            <div className="flex justify-center w-full">
+            <div className="grid justify-items-center  w-full">
                 <h3 className="text-white">{description}</h3>
                 <Button className="mx-auto black">{callToAction}</Button>
             </div>
