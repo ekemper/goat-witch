@@ -27,18 +27,16 @@ const Jumbotron = () => {
 
 const Landing = () => {
     return (
-        <div className="w-full h-full">
+        <div>
             <video 
                 src={videoSource} 
                 autoPlay muted loop 
-                className="video-bg w-full absolute t-0" 
+                className="video-bg max-w-7xl md:max-w-full absolute t-0" 
                 // playbackRate={0.5}  // TODO: EK WTF?
                  />
             {/* <div className="bg-overlay"> */}
                 <Jumbotron />
             {/* </div> */}
-
-
         </div>
     )
 }
