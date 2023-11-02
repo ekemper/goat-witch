@@ -2,10 +2,10 @@ const About = () => {
 
 
     return (
-        <>
+        <div className="">
             <h1>About</h1>
-            <img src={"/about.jpg"} />
-        </>
+            <img  className="" src={"/about.jpg"} />
+        </div>
     )
 }
 

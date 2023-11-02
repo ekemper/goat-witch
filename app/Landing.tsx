@@ -3,22 +3,22 @@ import Button from 'react-bootstrap/Button';
 import Image from "next/image";
 
 const videoSource = '/trees.mp4';
-
-
-const brand = 'GoatWitch Tattoo'
 const description = 'Dope Human'
 const callToAction = 'Book a session'
 
 const Jumbotron = () => {
     return (
-        <div className='bg-black/[.1] relative p-4 md:px-30 flex-col'>
+        <div className='bg-black/[.1] relative p-4 md:px-30 flex-col md:flex-row'>
 
             {/* eslint-disable-next-line @next/next/no-img-element*/}
-            <img className="w-full mt-12" src={'/IMG_0302_transparent.png'} alt='Goat Witch' />
+            <img 
+                className="w-full mt-12 md:w-1/2" 
+                src={'/IMG_0302_transparent.png'} 
+                alt='Goat Witch' />
 
-            <div className="grid justify-items-center  w-full">
-                <h3 className="text-white">{description}</h3>
-                <Button className="mx-auto black">{callToAction}</Button>
+            <div className="flex flex-col w-full my-16">
+                <h3 className="text-white text-center">{description}</h3>
+                <Button className="mx-auto black uppercase">{callToAction}</Button>
             </div>
 
         </div>
@@ -27,11 +27,11 @@ const Jumbotron = () => {
 
 const Landing = () => {
     return (
-        <div>
+        <div className="max-w-7xl md:max-w-full">
             <video 
                 src={videoSource} 
                 autoPlay muted loop 
-                className="video-bg max-w-7xl md:max-w-full absolute t-0" 
+                className="video-bg max-w-7xl md:max-w-full absolute" 
                 // playbackRate={0.5}  // TODO: EK WTF?
                  />
             {/* <div className="bg-overlay"> */}

@@ -11,9 +11,9 @@ const expand = 'sm'
 function NavHeader() {
   return (
     <>
-      <Navbar fixed="top" key={expand} expand={expand} className="fixed" data-bs-theme="dark">
+      <Navbar fixed="top" expand={expand} className="" data-bs-theme="dark">
         <Container fluid>
-          <Navbar.Toggle className="text-white" aria-controls={'offcanvasNavbar-expand'} />
+          <Navbar.Toggle aria-controls={'offcanvasNavbar-expand'} />
           <Navbar.Offcanvas
             aria-labelledby={'offcanvasNavbarLabel-expand'}
             placement="end"
@@ -28,7 +28,10 @@ function NavHeader() {
                 <Nav.Link className='text-white my-auto' href="#action2">Flash</Nav.Link>
                 <Nav.Link className='text-white my-auto' href="#action2">About</Nav.Link>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img className="h-12" src={'/Millennium_Falcon_transparent.png'} alt='Millennium_Falcon'/>
+                <img 
+                  className="h-12" 
+                  src={'/Millennium_Falcon_transparent.png'} 
+                  alt='Millennium_Falcon'/>
               </Nav>
             </Offcanvas.Body>
           </Navbar.Offcanvas>
