@@ -5,7 +5,7 @@ const About = () => {
         I am transmasculine gender-gueer and prefer they/them pronouns.`
 
     return (
-        <div className="w-3/4 mx-auto">
+        <div className="w-3/4 mx-auto md:grid md:grid-cols-2">
             {/* eslint-disable-next-line @next/next/no-img-element*/}
             <img className="mx-auto max-w-xsm" alt="Hurray!" src={"/about-small.jpg"} />
             <div className="bg-slate-500 mt-4">
