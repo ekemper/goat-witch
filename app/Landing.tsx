@@ -17,9 +17,9 @@ const Landing = () => {
     const JumbotronContainerDesktopClasses = `
         md:flex-row
         md:relative 
-        md:max-w-6xl
+        md:max-w-5xl
         md:mx-auto`
-        
+
     const description = 'Dope Human'
     const callToAction = 'Book a session'
 
@@ -35,7 +35,7 @@ const Landing = () => {
 
                 {/* eslint-disable-next-line @next/next/no-img-element*/}
                 <img
-                    className="w-full md:w-1/2"
+                    className="w-full md:w-1/2 md:mt-10"
                     src={'/IMG_0302_transparent.png'}
                     alt='Goat Witch Tatoo' />
 
