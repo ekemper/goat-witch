@@ -17,9 +17,8 @@ const Jumbotron = () => {
         uppercase
         p-2`
 
-
     return (
-        <div className='bg-black/[.1] relative p-4 md:px-30 flex-col md:flex-row'>
+        <div className='p-4 md:px-30 flex-col md:flex-row'>
 
             {/* eslint-disable-next-line @next/next/no-img-element*/}
             <img 
@@ -38,7 +37,7 @@ const Jumbotron = () => {
 
 const Landing = () => {
     return (
-        <div className="max-w-7xl md:max-w-full">
+        <div className="h-screen grid content-center  md:max-w-full">
             <video 
                 src={videoSource} 
                 autoPlay muted loop 
