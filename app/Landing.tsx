@@ -8,11 +8,12 @@ const callToAction = 'Book a session'
 
 const Jumbotron = () => {
 
+    // TODO EK: why does the hover color not work??
     const callToActionClasses = `
         w-3/4 
         mx-auto 
         rounded-none 
-        bg-slate-400 
+        bg-green-900
         text-white
         uppercase
         p-2`
