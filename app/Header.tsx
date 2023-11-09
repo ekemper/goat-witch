@@ -11,14 +11,14 @@ const expand = 'sm'
 function NavHeader() {
   return (
     <>
-      <Navbar fixed="top" expand={expand} className="" data-bs-theme="dark">
+      <Navbar expand={expand} className="" >
         <Container fluid>
           <Navbar.Toggle aria-controls={'offcanvasNavbar-expand'} />
           <Navbar.Offcanvas
             aria-labelledby={'offcanvasNavbarLabel-expand'}
             placement="end"
           >
-            <Offcanvas.Header closeButton className='bg-slate-500/[.5]'>
+            <Offcanvas.Header closeButton className=''>
               <Offcanvas.Title>Menu</Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body className='h-auto'>

@@ -9,7 +9,7 @@ import About from './About';
 
 export default function Home() {
   return (
-    <main className='bg-slate'>
+    <main className='bg-slate-800'>
       <Header/>
       <Landing/>
       <About/>

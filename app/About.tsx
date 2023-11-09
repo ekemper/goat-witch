@@ -1,10 +1,16 @@
 const About = () => {
 
+    const headerText = `Hi, my name is Carlyn!`
+    const bodyText = `I’m a Colorado-born artist with a deep love for people, animals, plants and the land. 
+        I am transmasculine gender-gueer and prefer they/them pronouns.`
 
     return (
-        <div className="">
-            <h1>About</h1>
-            <img  className="" src={"/about.jpg"} />
+        <div className="bg-slate-400 w-3/4 mx-auto">
+            {/* eslint-disable-next-line @next/next/no-img-element*/}
+            <img className="mx-auto max-w-xsm" alt="Hurray!" src={"/about-small.jpg"} />
+            <h4 className="text-center px-4 pt-4">{headerText}</h4>
+            <p className="text-left px-4 pb-4">{bodyText}</p>
+
         </div>
     )
 }
