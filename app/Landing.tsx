@@ -38,7 +38,7 @@ const Landing = () => {
                 className="hidden lg:block absolute"
             // playbackRate={0.5}  // TODO: EK WTF?
             />
-            <div className={`p-4 flex flex-col ${JumbotronContainerDesktopClasses}`}>
+            <div className={`p-4 flex flex-col mt-20 mb-10 ${JumbotronContainerDesktopClasses}`}>
 
                 {/* eslint-disable-next-line @next/next/no-img-element*/}
                 <img
