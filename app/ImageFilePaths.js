@@ -1,0 +1,26 @@
+const filePaths = [
+'/assetLibrary/portfolioImages/122960373_10220227667974518_7437679680329748235_o.jpg',
+'/assetLibrary/portfolioImages/20200712_222137.jpg',
+'/assetLibrary/portfolioImages/David Hatchet.jpg',
+'/assetLibrary/portfolioImages/IMG_0252.jpg',
+'/assetLibrary/portfolioImages/IMG_0253.jpg',
+'/assetLibrary/portfolioImages/IMG_0254.jpg',
+'/assetLibrary/portfolioImages/IMG_0255.jpg',
+'/assetLibrary/portfolioImages/IMG_0256.jpg',
+'/assetLibrary/portfolioImages/IMG_0257.jpg',
+'/assetLibrary/portfolioImages/IMG_0302.jpg',
+'/assetLibrary/portfolioImages/Isagoat (1).jpg',
+'/assetLibrary/portfolioImages/James stencil (1).jpg',
+'/assetLibrary/portfolioImages/Matchstick revised (1).jpg',
+'/assetLibrary/portfolioImages/Millennium Falcon (1).jpg',
+'/assetLibrary/portfolioImages/Millennium_Falcon_transparent.png',
+'/assetLibrary/portfolioImages/PXL_20211224_213137971.jpg',
+'/assetLibrary/portfolioImages/PXL_20220101_025436170.jpg',
+'/assetLibrary/portfolioImages/PXL_20220101_060147593.jpg',
+'/assetLibrary/portfolioImages/PXL_20220725_231049492.MP.jpg',
+'/assetLibrary/portfolioImages/PXL_20221222_171810447.MP.jpg',
+'/assetLibrary/portfolioImages/Skelly Ibex (1).jpg',
+'/assetLibrary/portfolioImages/Tortoisefinal.jpg',
+'/assetLibrary/portfolioImages/X Wing (2).jpg'
+]; 
+export default filePaths;

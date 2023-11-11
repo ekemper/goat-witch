@@ -1,72 +1,85 @@
-import { create } from "domain";
-import { FC } from "react";
+/* eslint-disable @next/next/no-img-element */
 
-const imgUrls = [
-    "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg",
-    "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg",
-]
-
-
-{/*
-let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-let chunkSize = 3;
-let chunks = [];
-
-while (numbers.length > 0) {
-    chunks.push(numbers.splice(0, chunkSize));
-}
-console.log(chunks); // [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10]]
-
-*/}
-
-const createImgRows = () => {
-    let chunkSize = 3;
-    let rows = []
-    while (imgUrls.length > 0) {
-        rows.push(imgUrls.splice(0, chunkSize));
-    }
-    return rows
-}
-
-const imageUrlsByRow = createImgRows()
-console.log({imageUrlsByRow})
-
-const imageClasses = `h-auto max-w-full`
+import filePaths from "./ImageFilePaths.js";
 
 const Gallery = () => {
-    return (<div className="grid grid-cols-2 md:grid-cols-3" >
+    return (
+        <div className="container mx-auto px-5 py-2 lg:px-32 lg:pt-12">
+            <div className="-m-1 flex flex-wrap md:-m-2">
+                {
+                    filePaths.map((path, index) => {
+                        return (
+                            <div className="flex w-1/3 flex-wrap" key={index}>
+                                <div className="w-full p-1 md:p-2">
+                                    <img
+                                        alt="gallery"
+                                        className="block h-full w-full rounded-lg object-cover object-center"
+                                        src={path} />
+                                </div>
+                            </div>
+                        )
+                    })
+                }
+            </div >
+        </div>
+    )
 
-        {imageUrlsByRow.map((row, index) => {
-            return (
-                <div className="grid" key={index}>
-                    <div>
-                        {/* eslint-disable-next-line @next/next/no-img-element*/}
-                        <img className={imageClasses} src={imageUrlsByRow[index][0]} alt={`${index} - 1`} />
-                    </div>
-                    <div>
-                        {/* eslint-disable-next-line @next/next/no-img-element*/}
-                        <img className={imageClasses} src={imageUrlsByRow[index][1]} alt={`${index} - 2`} />
-                    </div>
-                    <div>
-                        {/* eslint-disable-next-line @next/next/no-img-element*/}
-                        <img className={imageClasses} src={imageUrlsByRow[index][2]} alt={`${index} - 3`} />
-                    </div>
-                </div>
-            )
-        })}
-    </div>)
+
 }
 
 export default Gallery
+
+{/*
+<div class="container mx-auto px-5 py-2 lg:px-32 lg:pt-12">
+  <div class="-m-1 flex flex-wrap md:-m-2">
+    <div class="flex w-1/3 flex-wrap">
+      <div class="w-full p-1 md:p-2">
+        <img
+          alt="gallery"
+          class="block h-full w-full rounded-lg object-cover object-center"
+          src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
+      </div>
+    </div>
+    <div class="flex w-1/3 flex-wrap">
+      <div class="w-full p-1 md:p-2">
+        <img
+          alt="gallery"
+          class="block h-full w-full rounded-lg object-cover object-center"
+          src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(74).webp" />
+      </div>
+    </div>
+    <div class="flex w-1/3 flex-wrap">
+      <div class="w-full p-1 md:p-2">
+        <img
+          alt="gallery"
+          class="block h-full w-full rounded-lg object-cover object-center"
+          src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(75).webp" />
+      </div>
+    </div>
+    <div class="flex w-1/3 flex-wrap">
+      <div class="w-full p-1 md:p-2">
+        <img
+          alt="gallery"
+          class="block h-full w-full rounded-lg object-cover object-center"
+          src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp" />
+      </div>
+    </div>
+    <div class="flex w-1/3 flex-wrap">
+      <div class="w-full p-1 md:p-2">
+        <img
+          alt="gallery"
+          class="block h-full w-full rounded-lg object-cover object-center"
+          src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(76).webp" />
+      </div>
+    </div>
+    <div class="flex w-1/3 flex-wrap">
+      <div class="w-full p-1 md:p-2">
+        <img
+          alt="gallery"
+          class="block h-full w-full rounded-lg object-cover object-center"
+          src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp" />
+      </div>
+    </div>
+  </div>
+</div>
+*/}
