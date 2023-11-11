@@ -19,7 +19,7 @@ const Landing = () => {
         md:relative 
         md:max-w-5xl
         md:mx-auto
-        md:h-1/2`
+        md:h-fit`
 
     const description = 'Dope Human'
     const callToAction = 'Book a session'
@@ -36,7 +36,7 @@ const Landing = () => {
 
                 {/* eslint-disable-next-line @next/next/no-img-element*/}
                 <img
-                    className="w-full md:w-1/2 md:mt-10 md:ml-10"
+                    className="w-full md:w-1/2 md:mt-16 md:ml-10"
                     src={'/IMG_0302_transparent.png'}
                     alt='Goat Witch Tatoo' />
 
