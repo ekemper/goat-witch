@@ -10,7 +10,7 @@ import Gallery from './Gallery';
 
 export default function Home() {
   return (
-    <main className='bg-slate-800'>
+    <main className='bg-[#141715]'>
       <Header/>
       <Landing/>
       <Gallery/>
