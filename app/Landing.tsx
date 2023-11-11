@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback, useEffect, useRef } from "react";
 
 const videoSource = '/trees.mp4';
 
@@ -17,20 +17,25 @@ const Landing = () => {
     const JumbotronContainerDesktopClasses = `
         md:flex-row
         md:relative 
-        md:max-w-5xl
         md:mx-auto
-        md:h-fit
-        md:mt-10`
+        md:mt-10
+        lg:h-[32rem]
+        xl:h-[38rem]
+        2xl:h-[50rem]
+        lg:mb-16
+        xl:mb-40
+        2xl:mb-60
+        `
 
     const description = 'Dope Human'
     const callToAction = 'Book a session'
 
     return (
-        <div className="h-screen md:h-5xl flex justify-center">
+        <div className=" flex justify-center">
             <video
                 src={videoSource}
                 autoPlay muted loop
-                className="hidden lg:block max-w-7xl absolute"
+                className="hidden lg:block absolute"
             // playbackRate={0.5}  // TODO: EK WTF?
             />
             <div className={`p-4 flex flex-col ${JumbotronContainerDesktopClasses}`}>
