@@ -9,7 +9,7 @@ const Gallery = () => {
                 {
                     filePaths.map((path, index) => {
                         return (
-                            <div className="flex w-1/3 flex-wrap" key={index}>
+                            <div className="flex md:w-1/3 flex-wrap" key={index}>
                                 <div className="w-full p-1 md:p-2">
                                     <img
                                         alt="gallery"
