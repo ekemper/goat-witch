@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef } from "react";
+import React from "react";
 
 const videoSource = '/trees.mp4';
 
@@ -40,7 +40,6 @@ const Landing = () => {
             />
             <div className={`p-4 flex flex-col mt-20 mb-10 ${JumbotronContainerDesktopClasses}`}>
 
-                {/* eslint-disable-next-line @next/next/no-img-element*/}
                 <img
                     className="w-full md:w-1/2 md:mt-10 md:ml-10"
                     src={'/IMG_0302_transparent.png'}

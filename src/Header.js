@@ -5,7 +5,8 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+// import { BrowserRouter as Router, Routes, Route, 
+// import { Link } from "react-router-dom";
 
 function NavHeader() {
   return (
@@ -23,14 +24,13 @@ function NavHeader() {
             <Offcanvas.Body className='h-auto'>
               <Nav className="justify-content-end flex-grow-1 pe-3">
 
-              <li><Link to="/#about">About</Link></li>
-              <li><Link to="/#top">top</Link></li>
+              {/* <li><Link to="/#about">About</Link></li> */}
+              {/* <li><Link to="/#top">top</Link></li> */}
 
                 {/* <Nav.Link className='text-white my-auto' href="#action1">Booking</Nav.Link>
                 <Nav.Link className='text-white my-auto' href="#action2">Portfolio</Nav.Link>
                 <Nav.Link className='text-white my-auto' href="#action2">Flash</Nav.Link>
                 <Nav.Link className='text-white my-auto' href="#action2">About</Nav.Link> */}
-                {/* eslint-disable-next-line @next/next/no-img-element */}
 
                 <img 
                   className="h-12" 

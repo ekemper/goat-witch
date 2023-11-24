@@ -1,18 +1,13 @@
-"use client"
-{
-  /* The following line can be included in your src/index.js or App.js file */
-}
-
-import 'bootstrap/dist/css/bootstrap.min.css';
-
+import './App.css';
 import Landing from './Landing'
 import Header from './Header';
 import About from './About';
 import Gallery from './Gallery';
 import Footer from './Footer';
 import TailwingWidthGuide from "./TailwindWidthGuide"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-export default function Home() {
+function App() {
   return (
     <main className='bg-[#141715]'>
       <TailwingWidthGuide/>
@@ -23,5 +18,7 @@ export default function Home() {
       <Gallery/>
       <Footer/>
     </main>
-  )
+  );
 }
+
+export default App;
