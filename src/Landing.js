@@ -26,9 +26,21 @@ const Landing = () => {
         xl:mb-40
         2xl:mb-60
         `
+   
+    const CallToAction = () => {
+        const description = 'Dope Human'
+        const callToAction = 'Book a session'
 
-    const description = 'Dope Human'
-    const callToAction = 'Book a session'
+        return (
+            <div className={`
+                flex flex-col w-full my-10 
+                md:w-1/2 md:grid md:content-center md:my-0
+                `}>
+                <h3 className="m-6 text-white text-center">{description}</h3>
+                <button className={callToActionClasses}>{callToAction}</button>
+            </div>
+        )
+    }
 
     return (
         <div className=" flex justify-center">
@@ -45,13 +57,7 @@ const Landing = () => {
                     src={'/IMG_0302_transparent.png'}
                     alt='Goat Witch Tatoo' />
 
-                <div className={`
-                    flex flex-col w-full my-10 
-                    md:w-1/2 md:grid md:content-center md:my-0
-                    `}>
-                    <h3 className="m-6 text-white text-center">{description}</h3>
-                    <button className={callToActionClasses}>{callToAction}</button>
-                </div>
+                <CallToAction />
 
             </div>
         </div>

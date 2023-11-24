@@ -5,18 +5,20 @@ import About from './About';
 import Gallery from './Gallery';
 import Footer from './Footer';
 import TailwingWidthGuide from "./TailwindWidthGuide"
+import Booking from './Booking';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
-  return (
-    <main className='bg-[#242b2b]'>
-      <TailwingWidthGuide/>
-      <Header/>
-      <Landing/>
-      <About/>
 
-      <Gallery/>
-      <Footer/>
+  return (
+    <main className="bg-grayGreenBackground">
+      <TailwingWidthGuide />
+      <Header />
+      <Landing />
+      <About />
+      <Gallery />
+      <Booking />
+      <Footer />
     </main>
   );
 }
