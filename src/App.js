@@ -9,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <main className='bg-[#141715]'>
+    <main className='bg-[#242b2b]'>
       <TailwingWidthGuide/>
       <Header/>
       <Landing/>

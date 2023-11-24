@@ -2,7 +2,8 @@
 import filePaths from "./ImageFilePaths.js";
 
 
-const GalleryImage = (path, index) => {
+const GalleryImage = ({path}) => {
+
     return (
         <div className="flex md:w-1/3 flex-wrap">
             <div className="w-full p-1 md:p-2">
