@@ -8,8 +8,8 @@ const Landing = () => {
         w-3/4 
         mx-auto 
         rounded-none 
-        bg-green-900
         text-white
+        bg-black
         uppercase
         p-2
         md:w-1/2`
