@@ -27,15 +27,18 @@ function NavHeader() {
     setMenuOpen(!menuOpen)
   }
 
-  const NavLinks = () => {
+  const MobileNavLinks = () => {
+    const commonLinkClasses = 'uppercase'
+    const mobileLinkClasses = 'w-full mx-auto my-4 py-2 text-xl border-solid border-2 border-black rounded-sm'
+    const deskTopLinkClasses = 'sm:border-none sm:mx-6 sm:w-auto sm:py-0 sm:px-4 sm:text-lg'
 
     return linkItems.map(item => {
       return (
         <li key={item.path}>
           <button
-            className='w-full mx-auto my-4 py-2 text-xl border-solid border-2 border-black rounded-sm'
+            className={`${commonLinkClasses} ${mobileLinkClasses} ${deskTopLinkClasses}`}
             onClick={() => {
-              toggleMenu()
+              if(menuOpen) toggleMenu()
               window.location.hash = item.path
             }}>
             <span>{item.text}</span>
@@ -47,9 +50,12 @@ function NavHeader() {
 
   const handleClose = () => setMenuOpen(false)
   return (
-    <Navbar expand='sm' variant='dark'>
+    <Navbar expand='sm' variant='dark' className='h-14'>
       <Container fluid>
-        <Navbar.Toggle className='color-green-900' aria-controls={'offcanvasNavbar-expand'} onClick={toggleMenu}/>
+        <Navbar.Toggle 
+          className='color-green-900' 
+          aria-controls={'offcanvasNavbar-expand'} 
+          onClick={toggleMenu}/>
         <Navbar.Offcanvas
           restoreFocus={false}
           show={menuOpen}
@@ -57,16 +63,16 @@ function NavHeader() {
           aria-labelledby={'offcanvasNavbarLabel-expand'}
           placement="end"
         >
-          <Offcanvas.Header className='text-white bg-grayGreenBackground' closeButton>
+          <Offcanvas.Header 
+            className='text-white bg-grayGreenBackground' 
+            closeButton>
             <Offcanvas.Title></Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body className='h-auto text-white bg-grayGreenBackground'>
             <Nav className="justify-content-end flex-grow-1 pe-3">
-
-              <NavLinks />
-
+              <MobileNavLinks className='block sm:hidden'/>
               <img
-                className="h-12 hidden lg:block"
+                className="h-12 hidden sm:block my-auto"
                 src={'/Millennium_Falcon_transparent.png'}
                 alt='Millennium_Falcon' />
             </Nav>

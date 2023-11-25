@@ -12,7 +12,7 @@ function App() {
 
   return (
     <main className="bg-grayGreenBackground">
-      <TailwingWidthGuide />
+      {/* <TailwingWidthGuide /> */}
       <Header />
       <Landing />
       <About />
