@@ -27,6 +27,10 @@ const Landing = () => {
         2xl:mb-60
         `
    
+    const handleCallToActionClick = () => {
+        
+    }
+
     const CallToAction = () => {
         const description = 'Dope Human'
         const callToAction = 'Book a session'
@@ -37,7 +41,12 @@ const Landing = () => {
                 md:w-1/2 md:grid md:content-center md:my-0
                 `}>
                 <h3 className="m-6 text-white text-center">{description}</h3>
-                <button className={callToActionClasses}>{callToAction}</button>
+                <button 
+                    onClick={() => window.location.hash = 'booking'} 
+                    className={callToActionClasses}>
+                    {callToAction}
+                </button>
+
             </div>
         )
     }
