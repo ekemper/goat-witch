@@ -27,10 +27,6 @@ const Landing = () => {
         2xl:mb-60
         `
    
-    const handleCallToActionClick = () => {
-        
-    }
-
     const CallToAction = () => {
         const description = 'Dope Human'
         const callToAction = 'Book a session'
