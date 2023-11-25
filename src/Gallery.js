@@ -1,6 +1,7 @@
 
 import filePaths from "./ImageFilePaths.js";
 import ScrollSpySpacer from "./ScrollSpySpacer.js";
+import SectionTitle from "./SectionTitle.js";
 
 const GalleryImage = ({ path }) => {
 
@@ -20,7 +21,8 @@ const Gallery = () => {
     return (
         <div id="gallery">
             <ScrollSpySpacer />
-            <div className="container mx-auto mt-16 md:mt-36 px-5 py-2 lg:px-32 lg:pt-12">
+            <SectionTitle text={'Gallery'}/>
+            <div className="container mx-auto mt-14 md:mt-36 px-5 py-2 lg:px-32 lg:pt-12">
                 <div className="-m-1 flex flex-wrap md:-m-2">
                     {
                         filePaths.map((path, index) => {
