@@ -9,29 +9,29 @@ import Booking from './Booking';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-window.onload = function () {
+// window.onload = function () {
 
-  const options = {
-    url: 'https://calendly.com/edwardkemper',
-    text: 'Schedule time with me',
-    color: '#0069ff',
-    textColor: '#ffffff',
-    branding: true
-  }
+//   const options = {
+//     url: 'https://calendly.com/edwardkemper',
+//     text: 'Schedule time with me',
+//     color: '#0069ff',
+//     textColor: '#ffffff',
+//     branding: true
+//   }
 
 
-  setTimeout(() => {
-    Calendly.initBadgeWidget(options);
-    console.log('called')
-  }, 10000)
-}
+//   setTimeout(() => {
+//     Calendly.initBadgeWidget(options);
+//     console.log('called')
+//   }, 10000)
+// }
 
 function App() {
 
   return (
     <main className="bg-grayGreenBackground">
-      <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"></link>
-      <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+      {/* <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"></link>
+      <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script> */}
       {/* <TailwingWidthGuide /> */}
       <Header />
       <Landing />
