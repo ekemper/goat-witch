@@ -12,7 +12,7 @@ handleFiles = (stdout) => {
 
     jsBooger = `const filePaths = [${filePaths}\n]; \nexport default filePaths;`
 
-    fs.writeFile('./app/ImageFilePaths.js', jsBooger, err => {
+    fs.writeFile('./ImageFilePaths.js', jsBooger, err => {
         if (err) {
             console.error(err);
         }
@@ -23,7 +23,7 @@ handleFiles = (stdout) => {
 }
 
 
-const relativePathForDisplay = `/assetLibrary/portfolioImages`
+const relativePathForDisplay = `/portfolioImages`
 
 exec(`ls ./public${relativePathForDisplay}`, (error, stdout, stderr) => {
     if (error) {

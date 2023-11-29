@@ -26,7 +26,6 @@ const About = () => {
         { firstBit: `Land Acknowledgement: `, rest: `My home studio is on the unceded land of the Ute, Arapaho, and Cheyenne communities. As a white descendant of European settlers, I systemically benefit from colonization, the institution of slavery and the oppression of people of color. If you are African American, Native American, or are a person of color and you desire grants or discounts for your desired tattoo, please make a note in your Tattoo Request Form(insert link here).` }
     ]
 
-
     const [showMoreText, setShowMoreText] = useState(false)
 
     const MoreText = () => {
@@ -45,7 +44,7 @@ const About = () => {
             <ScrollSpySpacer />
             <SectionTitle text={'About'} />
             <div className="w-4/5 mt-16 md:mt-36 mx-auto md:grid md:grid-cols-2 max-w-5xl">
-                <img className="mx-auto rounded-full" alt="Hurray!" src={"/about-small.jpg"} />
+                <img className="mx-auto rounded-full" alt="Hurray!" src={"/assets/about-small.jpg"} />
                 <div className="mt-4 text-white sm:my-8 md:mx-20">
                     <h4 className="text-left px-4 pt-4 font-bold uppercase">{headerText}</h4>
                     <p className="text-left px-4 pb-4 ">{bodyText}</p>
