@@ -4,7 +4,7 @@ import Header from './Header';
 import About from './About';
 import Gallery from './Gallery';
 import Footer from './Footer';
-// import TailwingWidthGuide from "./TailwindWidthGuide"
+import TailwingWidthGuide from "./TailwindWidthGuide"
 import Booking from './Booking';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -32,12 +32,12 @@ function App() {
     <main className="bg-grayGreenBackground">
       {/* <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"></link>
       <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script> */}
-      {/* <TailwingWidthGuide /> */}
-      <Header />
+      <TailwingWidthGuide />
+      {/* <Header /> */}
       <Landing />
-      <Booking />
       <About />
       <Gallery />
+      <Booking />
       <Footer />
     </main>
   );

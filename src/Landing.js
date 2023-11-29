@@ -1,68 +1,67 @@
 import React from "react";
 
-const videoSource = '/trees.mp4';
-
 const Landing = () => {
 
-    const callToActionClasses = `
-        w-3/4 
-        mx-auto 
-        rounded-none 
-        text-white
-        bg-black
-        uppercase
-        p-2
-        md:w-1/2`
-
-    const JumbotronContainerDesktopClasses = `
+    const JumbotronContainerClasses = `
+        h-full
+        mt-48
         md:flex-row
         md:relative 
         md:mx-auto
-        md:mt-10
-        lg:h-[32rem]
-        xl:h-[38rem]
-        2xl:h-[50rem]
-        lg:mb-16
-        xl:mb-40
-        2xl:mb-60
+        md:mt-10`
+        // lg:h-[32rem]
+        // xl:h-[38rem]
+        // 2xl:h-[50rem]
+        // lg:mb-16
+        // xl:mb-40
+        // 2xl:mb-60
+        // `
+
+    const landingClasses = `
+        flex 
+        justify-center 
+        h-full 
+        bg-[url('../public/assets/bgSkullMoss.jpg')]
+        xl:bg-[url('../public/assets/bgMountainsLanding.png')]
         `
-   
-    const CallToAction = () => {
-        const description = 'Dope Human'
-        const callToAction = 'Book a session'
-
-        return (
-            <div className={`
-                flex flex-col w-full my-10 
-                md:w-1/2 md:grid md:content-center md:my-0
-                `}>
-                <h3 className="m-6 text-white text-center">{description}</h3>
-                <button 
-                    onClick={() => window.location.hash = 'booking'} 
-                    className={callToActionClasses}>
-                    {callToAction}
-                </button>
-
-            </div>
-        )
-    }
 
     return (
-        <div className=" flex justify-center">
-            <video
-                src={videoSource}
-                autoPlay muted loop
-                className="hidden lg:block absolute"
-            // playbackRate={0.5}  // TODO: EK WTF?
-            />
-            <div className={`p-4 flex flex-col mt-20 mb-10 ${JumbotronContainerDesktopClasses}`}>
+        <div className={landingClasses}>
 
-                <img
-                    className="w-full md:w-1/2 md:mt-10 md:ml-10"
-                    src={'/IMG_0302_transparent.png'}
-                    alt='Goat Witch Tatoo' />
+            <img
+                src={'/assets/headerTopEdge.png'}
+                className="absolute h-20 md:w-full md:h-28"
+                alt="top border" />
 
-                <CallToAction />
+            {/* <img
+                src={'/assets/landingBottomEdge.png'}
+                className="b-0 fixed"
+                alt="bottom border" /> */}
+
+            <div className={JumbotronContainerClasses}>
+
+                <img 
+                    className="hidden xl:block w-4/5 mx-auto" 
+                    src="/assets/xlGoatWitchHeader.png" 
+                    alt="Goat Witch Tattoo"/>
+
+                <img 
+                    className="block xl:hidden w-4/5 mx-auto sm:w-1/2" 
+                    src="/assets/stackedHeaderGreenBlack.png" 
+                    alt="Goat Witch Tattoo"/>
+
+                <div className="flex w-4/5">
+                    <img
+                        className="w-1/2 mx-auto"
+                        src={'/assets/ibexTransparent.png'}
+                        alt='Skelly Ibex' />
+
+                    <button
+                        onClick={() => window.location.hash = 'booking'}
+                        className='w-1/2 mx-auto'>
+                        <img src={"/assets/bookHere.png"} alt="book here" />
+                    </button>
+                </div>
 
             </div>
         </div>
