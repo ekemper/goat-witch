@@ -73,7 +73,7 @@ function NavHeader() {
               <MobileNavLinks className='block sm:hidden'/>
               <img
                 className="h-12 hidden sm:block my-auto"
-                src={'/Millennium_Falcon_transparent.png'}
+                src={'/assets/Millennium_Falcon_transparent.png'}
                 alt='Millennium_Falcon' />
             </Nav>
           </Offcanvas.Body>
