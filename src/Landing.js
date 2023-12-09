@@ -46,7 +46,7 @@ const Landing = () => {
                     src="/assets/stackedHeaderGreenBlack.png" 
                     alt="Goat Witch Tattoo"/>
 
-                <div className="grid grid-cols-2 w-4/5 mx-8">
+                <div className="grid grid-cols-2 mx-8 lg:px-36 xl:px-48">
                     <img
                         className=""
                         src={'/assets/ibexTransparent.png'}
@@ -54,8 +54,8 @@ const Landing = () => {
 
                     <button
                         onClick={() => window.location.hash = 'booking'}
-                        className=''>
-                        <img src={"/assets/bookHere.png"} alt="book here" />
+                        >
+                        <img src={"/assets/bookHere.png"} alt="book here" className='max-h-64 m-auto' />
                     </button>
                 </div>
 
