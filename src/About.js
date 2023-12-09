@@ -1,7 +1,7 @@
 import ScrollSpySpacer from "./ScrollSpySpacer"
 import SectionTitle from "./SectionTitle"
-
 import { useState } from 'react'
+
 const About = () => {
 
     const headerText = `Hi, my name is Carlyn!`
@@ -31,7 +31,7 @@ const About = () => {
     const MoreText = () => {
         return moreTextParagraphs.map(paragraph => {
             return (
-                <p className="text-white w-4/5 mx-auto sm:w-3/4 md:mt-4">
+                <p className="text-white w-4/5 font-bold mx-auto sm:w-3/4 md:mt-4 backdrop-blur-sm" >
                     <span className="text-2xl font-bold uppercase">{paragraph.firstBit}</span>
                     {paragraph.rest}
                 </p>
@@ -40,17 +40,21 @@ const About = () => {
     }
 
     const AboutContent = () => {
+        const bottomPadding = `pb-6 sm:pb-10 md:pb-48 lg:pb-72 xl:pb-80`
         return (
-            <div className="mt-4 text-white mx-auto my-8 md:mx-20 ">
+            <div id='aboutContent' className={`mt-4 ${bottomPadding} mx-14 text-white`}>
 
-                <h4 className="mx-auto pt-4 w-full font-bold uppercase">{headerText}</h4>
-                <p className="mx-auto pb-4 w-full">{bodyText}</p>
+                <div className="backdrop-blur-sm rounded-lg">
+                    <h4 className="mx-auto pt-4 w-full font-bold uppercase ">{headerText}</h4>
+                    <p className="mx-auto font-bold pb-4 w-full">{bodyText}</p>
+                </div>
                 {<button
                     onClick={() => setShowMoreText(true)}
                     className="w-full 
                         rounded-none 
                         text-white
                         bg-black
+                        font-bold
                         uppercase
                         p-2">
                     Read More!
@@ -66,14 +70,14 @@ const About = () => {
         <div id="about" className="bg-[url('../public/assets/bgRockPlant.jpg')]">
             <ScrollSpySpacer />
             <SectionTitle text={'About'} />
-            <div className={`w-4/5 mt-16 md:mt-36 ${aboutColumnClasses} `}>
+            <div className={`w-4/5 mt-16 md:mt-36 ${aboutColumnClasses}`}>
                 <img
                     className="mx-auto rounded-full"
                     alt="Hurray!"
                     src={"/assets/about-small.jpg"} />
                 <AboutContent />
             </div>
-            {showMoreText && <div className={`mt-6 ${aboutColumnClasses} sm:mt-14`}><MoreText /></div>}
+            {showMoreText && <div className={`mt-6 pb-8 lg:pb-16 ${aboutColumnClasses} sm:mt-14 backdrop-blur-sm rounded-lg`}><MoreText /></div>}
         </div>
     )
 }
