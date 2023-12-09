@@ -1,6 +1,6 @@
 import './App.css';
 import Landing from './Landing'
-import Header from './Header';
+// import Header from './Header';
 import About from './About';
 import Gallery from './Gallery';
 import Footer from './Footer';
