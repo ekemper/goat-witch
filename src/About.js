@@ -41,21 +41,21 @@ const About = () => {
 
     const AboutContent = () => {
         return (
-            <div className="mt-4 text-white mx-auto my-8 md:mx-20">
-                
-                    <h4 className="mx-auto pt-4 w-full font-bold uppercase">{headerText}</h4>
-                    <p className="mx-auto pb-4 w-full">{bodyText}</p>
-                    {<button
-                        onClick={() => setShowMoreText(true)}
-                        className="w-full 
+            <div className="mt-4 text-white mx-auto my-8 md:mx-20 ">
+
+                <h4 className="mx-auto pt-4 w-full font-bold uppercase">{headerText}</h4>
+                <p className="mx-auto pb-4 w-full">{bodyText}</p>
+                {<button
+                    onClick={() => setShowMoreText(true)}
+                    className="w-full 
                         rounded-none 
                         text-white
                         bg-black
                         uppercase
                         p-2">
-                        Read More!
-                    </button>}
-                
+                    Read More!
+                </button>}
+
             </div>
         )
     }
@@ -63,10 +63,10 @@ const About = () => {
     const aboutColumnClasses = `mx-auto md:grid md:grid-cols-2 max-w-5xl`
 
     return (
-        <div id="about">
+        <div id="about" className="bg-[url('../public/assets/bgRockPlant.jpg')]">
             <ScrollSpySpacer />
             <SectionTitle text={'About'} />
-            <div className={`w-4/5 mt-16 md:mt-36 ${aboutColumnClasses}`}>
+            <div className={`w-4/5 mt-16 md:mt-36 ${aboutColumnClasses} `}>
                 <img
                     className="mx-auto rounded-full"
                     alt="Hurray!"

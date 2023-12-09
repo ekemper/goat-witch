@@ -19,7 +19,7 @@ const GalleryImage = ({ path }) => {
 
 const Gallery = () => {
     return (
-        <div id="gallery">
+        <div id="gallery" className="bg-[url('../public/assets/bgSkullMoss.jpg')]">
             <ScrollSpySpacer />
             <SectionTitle text={'Gallery'}/>
             <div className="container mx-auto mt-14 md:mt-36 px-5 py-2 lg:px-32 lg:pt-12">
