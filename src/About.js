@@ -32,37 +32,48 @@ const About = () => {
         return moreTextParagraphs.map(paragraph => {
             return (
                 <p className="text-white w-4/5 mx-auto sm:w-3/4 md:mt-4">
-                    <span className="text-2xl font-bold uppercase text-red-500">{paragraph.firstBit}</span>
+                    <span className="text-2xl font-bold uppercase">{paragraph.firstBit}</span>
                     {paragraph.rest}
                 </p>
             )
         })
     }
 
+    const AboutContent = () => {
+        return (
+            <div className="mt-4 text-white mx-auto my-8 md:mx-20">
+                
+                    <h4 className="mx-auto pt-4 w-full font-bold uppercase">{headerText}</h4>
+                    <p className="mx-auto pb-4 w-full">{bodyText}</p>
+                    {<button
+                        onClick={() => setShowMoreText(true)}
+                        className="w-full 
+                        rounded-none 
+                        text-white
+                        bg-black
+                        uppercase
+                        p-2">
+                        Read More!
+                    </button>}
+                
+            </div>
+        )
+    }
+
+    const aboutColumnClasses = `mx-auto md:grid md:grid-cols-2 max-w-5xl`
+
     return (
         <div id="about">
             <ScrollSpySpacer />
             <SectionTitle text={'About'} />
-            <div className="w-4/5 mt-16 md:mt-36 mx-auto md:grid md:grid-cols-2 max-w-5xl">
-                <img className="mx-auto rounded-full" alt="Hurray!" src={"/assets/about-small.jpg"} />
-                <div className="mt-4 text-white sm:my-8 md:mx-20">
-                    <h4 className="text-left px-4 pt-4 font-bold uppercase">{headerText}</h4>
-                    <p className="text-left px-4 pb-4 ">{bodyText}</p>
-                    {<button
-                        onClick={() => setShowMoreText(true)}
-                        className="w-3/4 
-                            mx-4 
-                            rounded-none 
-                            text-white
-                            bg-black
-                            uppercase
-                            p-2">
-                        Read More!
-                    </button>}
-                </div>
+            <div className={`w-4/5 mt-16 md:mt-36 ${aboutColumnClasses}`}>
+                <img
+                    className="mx-auto rounded-full"
+                    alt="Hurray!"
+                    src={"/assets/about-small.jpg"} />
+                <AboutContent />
             </div>
-            {showMoreText && <div className="mt-6 mx-auto md:grid md:grid-cols-2 max-w-5xl sm:mt-14"><MoreText/></div>}
-
+            {showMoreText && <div className={`mt-6 ${aboutColumnClasses} sm:mt-14`}><MoreText /></div>}
         </div>
     )
 }

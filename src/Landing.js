@@ -4,11 +4,12 @@ const Landing = () => {
 
     const JumbotronContainerClasses = `
         h-full
-        mt-48
+        mt-28
         md:flex-row
         md:relative 
         md:mx-auto
-        md:mt-10`
+        md:mt-10
+        lg:mt-48`
         // lg:h-[32rem]
         // xl:h-[38rem]
         // 2xl:h-[50rem]
@@ -33,11 +34,6 @@ const Landing = () => {
                 className="absolute h-20 md:w-full md:h-28"
                 alt="top border" />
 
-            {/* <img
-                src={'/assets/landingBottomEdge.png'}
-                className="b-0 fixed"
-                alt="bottom border" /> */}
-
             <div className={JumbotronContainerClasses}>
 
                 <img 
@@ -50,15 +46,15 @@ const Landing = () => {
                     src="/assets/stackedHeaderGreenBlack.png" 
                     alt="Goat Witch Tattoo"/>
 
-                <div className="flex w-4/5">
+                <div className="grid grid-cols-2 w-4/5 mx-8">
                     <img
-                        className="w-1/2 mx-auto"
+                        className=""
                         src={'/assets/ibexTransparent.png'}
-                        alt='Skelly Ibex' />
+                        alt='Skelly Ibex'/>
 
                     <button
                         onClick={() => window.location.hash = 'booking'}
-                        className='w-1/2 mx-auto'>
+                        className=''>
                         <img src={"/assets/bookHere.png"} alt="book here" />
                     </button>
                 </div>
