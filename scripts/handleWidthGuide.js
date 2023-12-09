@@ -11,7 +11,9 @@ fs.readFile(filePath, { encoding: 'utf8' }, (err, data) => {
 
     const formatted = action=='uncomment' 
         ? data.replace('{/* <TailwingWidthGuide/> */}', '<TailwingWidthGuide\/>')
+              .replace('// import TailwingWidthGuide from "./TailwindWidthGuide"', 'import TailwingWidthGuide from "./TailwindWidthGuide"')
         : data.replace('<TailwingWidthGuide/>', '{/* <TailwingWidthGuide\/> */}')
+              .replace('import TailwingWidthGuide from "./TailwindWidthGuide"', '// import TailwingWidthGuide from "./TailwindWidthGuide"')
 
     fs.writeFile(filePath, formatted, 'utf8', err => {
 
