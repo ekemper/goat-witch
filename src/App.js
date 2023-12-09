@@ -32,7 +32,7 @@ function App() {
     <main className="bg-grayGreenBackground">
       {/* <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"></link>
       <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script> */}
-      <TailwingWidthGuide />
+      {/* <TailwingWidthGuide/> */}
       {/* <Header /> */}
       <Landing />
       <About />
