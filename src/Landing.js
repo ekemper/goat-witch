@@ -46,7 +46,7 @@ const Landing = () => {
                     src="/assets/stackedHeaderGreenBlack.png" 
                     alt="Goat Witch Tattoo"/>
 
-                <div className="grid grid-cols-2 mx-8 lg:px-36 xl:px-48">
+                <div className="grid grid-cols-2 mx-8 lg:px-36 xl:px-48 2xl:px-60">
                     <img
                         className=""
                         src={'/assets/ibexTransparent.png'}
