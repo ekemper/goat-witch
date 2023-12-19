@@ -31,7 +31,7 @@ const Landing = () => {
 
             <img
                 src={'/assets/headerTopEdge.png'}
-                className="absolute h-20 md:w-full md:h-28"
+                className="absolute h-20 md:w-full md:h-28 max-w-screen-2xl mx-auto"
                 alt="top border" />
 
             <div className={JumbotronContainerClasses}>

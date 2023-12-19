@@ -30,15 +30,20 @@ function App() {
 
   return (
     <main className="bg-grayGreenBackground">
-      {/* <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"></link>
+
+      <div className=' max-w-screen-2xl mx-auto'>
+        {/* <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"></link>
       <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script> */}
-      <TailwingWidthGuide/>
-      {/* <Header /> */}
-      <Landing />
-      <About />
-      <Gallery />
-      <Booking />
-      <Footer />
+        <TailwingWidthGuide />
+        {/* <Header /> */}
+        <Landing />
+        <About />
+        <Gallery />
+        <Booking />
+        <Footer />
+      </div>
+
+
     </main>
   );
 }
