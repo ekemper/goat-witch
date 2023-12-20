@@ -1,6 +1,5 @@
 import './App.css';
 import Landing from './Landing'
-// import Header from './Header';
 import About from './About';
 import Gallery from './Gallery';
 import Footer from './Footer';
@@ -36,7 +35,7 @@ function App() {
         {/* <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"></link>
       <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script> */}
         <TailwingWidthGuide />
-        {/* <Header /> */}
+        
         <Landing />
         <About />
         <Process /> 

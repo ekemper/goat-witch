@@ -1,4 +1,5 @@
 import React from "react";
+import Header from './Header';
 
 const Landing = () => {
 
@@ -29,7 +30,7 @@ const Landing = () => {
 
     return (
         <div className={landingClasses}>
-
+<Header />
             <img
                 src={'/assets/headerTopEdge.png'}
                 className="absolute h-20 md:w-full md:h-28 max-w-screen-2xl mx-auto"

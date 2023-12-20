@@ -50,7 +50,7 @@ function NavHeader() {
 
   const handleClose = () => setMenuOpen(false)
   return (
-    <Navbar expand='sm' variant='dark' className='h-14' fixed='top'>
+    <Navbar expand={false} variant='dark' className='h-14' fixed='top'>
       <Container fluid>
         <Navbar.Toggle 
           // className="justify-content-end bg-[url('../public/assets/Millennium_Falcon_transparent.png')]" 
