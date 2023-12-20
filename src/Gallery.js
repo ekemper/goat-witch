@@ -1,6 +1,7 @@
 
 import filePaths from "./ImageFilePaths.js";
 import ScrollSpySpacer from "./ScrollSpySpacer.js";
+import SectionHeader from "./SectionHeader.js";
 import SectionTitle from "./SectionTitle.js";
 import { useState } from 'react'
 
@@ -25,8 +26,7 @@ const Gallery = () => {
     const showAllGalleryImages = vw > medBreakpoint
     return (
         <div id="gallery" className="bg-[url('../public/assets/bgSkullMoss.jpg')] pb-8 lg:pb-14">
-            <ScrollSpySpacer />
-            <SectionTitle imgSrc={'/assets/portfolioHeader.jpg'}/>
+            <SectionHeader imgSrc={'/assets/portfolioHeader.jpg'} altText={'Gallery Header'}/>
             <div className="container mx-auto mt-14 md:mt-36 px-5 py-2 lg:px-32 lg:pt-12">
                 <div className="-m-1 flex flex-wrap md:-m-2">
                     {

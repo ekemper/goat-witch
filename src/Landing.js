@@ -24,6 +24,7 @@ const Landing = () => {
         h-full 
         bg-[url('../public/assets/bgSkullMoss.jpg')]
         xl:bg-[url('../public/assets/bgMountainsLanding.png')]
+        
         `
 
     return (

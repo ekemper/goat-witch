@@ -1,6 +1,5 @@
-import ScrollSpySpacer from "./ScrollSpySpacer"
-import SectionTitle from "./SectionTitle"
 import { useState } from 'react'
+import SectionHeader from './SectionHeader'
 
 const Process = () => {
 
@@ -29,9 +28,9 @@ const Process = () => {
     }
 
     return (
-        <div id="process" className="bg-[url('../public/assets/bgBugPaper.jpg')]">
-            <ScrollSpySpacer />
-            <SectionTitle imgSrc={'/assets/processHeader.jpg'} altText={'Process'} />
+        <div id="process" className="bg-[url('../public/assets/bgBugPaper.jpg')] pb-8 lg:pb-14">
+            
+            <SectionHeader imgSrc={'/assets/processHeader.jpg'} altText={'Process'} />
             <div className={`w-4/5 mt-16 md:mt-36 ${processColumnClasses}`}>
                 <img
                     className="mx-auto rounded-full"

@@ -1,11 +1,9 @@
-import ScrollSpySpacer from "./ScrollSpySpacer"
-import SectionTitle from "./SectionTitle"
+import SectionHeader from "./SectionHeader"
 
 const Booking = () => {
     return (
-        <div id="booking" className="bookingContainer">
-            {/* <ScrollSpySpacer /> */}
-            <SectionTitle altText={'Booking Section'} />
+        <div id="booking" className="bookingContainer pb-8 lg:pb-14">
+            <SectionHeader imgSrc={'aboutHeader.jpg'} altText={'Booking Section'} />
 
             {/* <div id="calendly-embed" style="min-width:320px;height:700px;"></div>
 

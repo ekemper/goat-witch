@@ -1,5 +1,4 @@
-import ScrollSpySpacer from "./ScrollSpySpacer"
-import SectionTitle from "./SectionTitle"
+import SectionHeader from "./SectionHeader"
 import { useState } from 'react'
 
 const About = () => {
@@ -67,9 +66,9 @@ const About = () => {
     const aboutColumnClasses = `mx-auto md:grid md:grid-cols-2 max-w-5xl`
 
     return (
-        <div id="about" className="bg-[url('../public/assets/bgRockPlant.jpg')]">
-            <ScrollSpySpacer />
-            <SectionTitle id='about-section' imgSrc={'/assets/aboutHeader.jpg'} altText={'About Section'} />
+        <div id="about" className="bg-[url('../public/assets/bgRockPlant.jpg')] pb-8 lg:pb-14">
+
+            <SectionHeader id='about-section' imgSrc={'/assets/aboutHeader.jpg'} altText={'About Section'} />
             <div className={`w-4/5 mt-16 md:mt-36 ${aboutColumnClasses}`}>
                 <img
                     className="mx-auto rounded-full"
