@@ -20,6 +20,6 @@ const filePaths = [
 '/portfolioImages/PXL_20221222_171810447.MP.jpg',
 '/portfolioImages/Skelly Ibex (1).jpg',
 '/portfolioImages/Tortoisefinal.jpg',
-'/portfolioImages/X Wing (2).jpg'
+'/portfolioImages/XWing.jpg'
 ]; 
 export default filePaths;
