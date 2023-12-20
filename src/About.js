@@ -68,7 +68,7 @@ const About = () => {
     return (
         <div id="about" className="bg-[url('../public/assets/bgRockPlant.jpg')] pb-8 lg:pb-14">
 
-            <SectionHeader id='about-section' imgSrc={'/assets/aboutHeader.jpg'} altText={'About Section'} />
+            <SectionHeader id='about-section' imgSrc={'/assets/aboutHeader.png'} altText={'About Section'} />
             <div className={`w-4/5 mt-16 md:mt-36 ${aboutColumnClasses}`}>
                 <img
                     className="mx-auto rounded-full"
@@ -76,7 +76,11 @@ const About = () => {
                     src={"/assets/about-small.jpg"} />
                 <AboutContent />
             </div>
-            {showMoreText && <div className={`mt-6 pb-8 lg:pb-16 ${aboutColumnClasses} sm:mt-14 backdrop-blur-sm rounded-lg`}><MoreText /></div>}
+            {showMoreText &&
+                <div className={`mt-6 pb-8 lg:pb-16 ${aboutColumnClasses} sm:mt-14 backdrop-blur-sm rounded-lg`}>
+                    <MoreText />
+                </div>
+            }
         </div>
     )
 }

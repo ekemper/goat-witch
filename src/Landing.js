@@ -10,13 +10,13 @@ const Landing = () => {
         md:mx-auto
         md:mt-10
         lg:mt-48`
-        // lg:h-[32rem]
-        // xl:h-[38rem]
-        // 2xl:h-[50rem]
-        // lg:mb-16
-        // xl:mb-40
-        // 2xl:mb-60
-        // `
+    // lg:h-[32rem]
+    // xl:h-[38rem]
+    // 2xl:h-[50rem]
+    // lg:mb-16
+    // xl:mb-40
+    // 2xl:mb-60
+    // `
 
     const landingClasses = `
         flex 
@@ -24,7 +24,7 @@ const Landing = () => {
         h-full 
         bg-[url('../public/assets/bgSkullMoss.jpg')]
         xl:bg-[url('../public/assets/bgMountainsLanding.png')]
-        
+
         `
 
     return (
@@ -37,26 +37,24 @@ const Landing = () => {
 
             <div className={JumbotronContainerClasses}>
 
-                <img 
-                    className="hidden xl:block w-4/5 mx-auto" 
-                    src="/assets/xlGreenBlackBrand.JPG" 
-                    alt="Goat Witch Tattoo"/>
+                <img
+                    className="hidden xl:block w-4/5 mx-auto"
+                    src="/assets/xlGreenBlackBrand.JPG"
+                    alt="Goat Witch Tattoo" />
 
-                <img 
-                    className="block xl:hidden w-4/5 mx-auto sm:w-1/2" 
-                    src="/assets/stackedHeaderGreenBlack.png" 
-                    alt="Goat Witch Tattoo"/>
+                <img
+                    className="block xl:hidden w-4/5 mx-auto sm:w-1/2"
+                    src="/assets/stackedHeaderGreenBlack.png"
+                    alt="Goat Witch Tattoo" />
 
                 <div className="grid grid-cols-2 mx-8 lg:px-36 xl:px-48 2xl:px-60">
                     <img
                         className=""
                         src={'/assets/ibexTransparent.png'}
-                        alt='Skelly Ibex'/>
+                        alt='Skelly Ibex' />
 
-                    <button
-                        onClick={() => window.location.hash = 'booking'}
-                        >
-                        <img src={"/assets/bookHere.png"} alt="book here" className='max-h-64 m-auto' />
+                    <button onClick={() => window.location.hash = 'booking'}>
+                        <img src={ '/assets/bookHere.png' } alt="book here" className='max-h-64 m-auto' />
                     </button>
                 </div>
 
