@@ -21,7 +21,7 @@ const Gallery = () => {
     return (
         <div id="gallery" className="bg-[url('../public/assets/bgSkullMoss.jpg')] pb-8 lg:pb-14">
             <ScrollSpySpacer />
-            <SectionTitle text={'Gallery'}/>
+            <SectionTitle imgSrc={'/assets/portfolioHeader.jpg'}/>
             <div className="container mx-auto mt-14 md:mt-36 px-5 py-2 lg:px-32 lg:pt-12">
                 <div className="-m-1 flex flex-wrap md:-m-2">
                     {
@@ -29,7 +29,7 @@ const Gallery = () => {
                             return (<GalleryImage path={path} key={index} />)
                         })
                     }
-                </div >
+                </div>
             </div>
         </div>
     )

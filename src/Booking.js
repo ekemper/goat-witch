@@ -4,8 +4,8 @@ import SectionTitle from "./SectionTitle"
 const Booking = () => {
     return (
         <div id="booking" className="bookingContainer">
-            <ScrollSpySpacer />
-            <SectionTitle text={'Booking'} />
+            {/* <ScrollSpySpacer /> */}
+            <SectionTitle altText={'Booking Section'} />
 
             {/* <div id="calendly-embed" style="min-width:320px;height:700px;"></div>
 

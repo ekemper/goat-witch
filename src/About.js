@@ -42,10 +42,10 @@ const About = () => {
     const AboutContent = () => {
         const bottomPadding = `pb-6 sm:pb-10 md:pb-48 lg:pb-72 xl:pb-80`
         return (
-            <div id='aboutContent' className={`mt-4 ${bottomPadding} mx-14 text-white`}>
+            <div id='aboutContent' className={`mt-4 ${bottomPadding} mx-6 text-white`}>
 
-                <div className="backdrop-blur-sm rounded-lg">
-                    <h4 className="mx-auto pt-4 w-full font-bold uppercase ">{headerText}</h4>
+                <div className="backdrop-blur-sm rounded-lg px-4">
+                    <h4 className="mx-auto pt-4 w-full font-bold uppercase">{headerText}</h4>
                     <p className="mx-auto font-bold pb-4 w-full">{bodyText}</p>
                 </div>
                 {<button
@@ -69,7 +69,7 @@ const About = () => {
     return (
         <div id="about" className="bg-[url('../public/assets/bgRockPlant.jpg')]">
             <ScrollSpySpacer />
-            <SectionTitle text={'About'} />
+            <SectionTitle id='about-section' imgSrc={'/assets/aboutHeader.jpg'} altText={'About Section'} />
             <div className={`w-4/5 mt-16 md:mt-36 ${aboutColumnClasses}`}>
                 <img
                     className="mx-auto rounded-full"

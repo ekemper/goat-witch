@@ -7,6 +7,7 @@ import Footer from './Footer';
 import TailwingWidthGuide from "./TailwindWidthGuide"
 import Booking from './Booking';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Process from './Process';
 
 
 // window.onload = function () {
@@ -38,6 +39,7 @@ function App() {
         {/* <Header /> */}
         <Landing />
         <About />
+        <Process /> 
         <Gallery />
         <Booking />
         <Footer />
