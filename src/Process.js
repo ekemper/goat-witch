@@ -37,7 +37,7 @@ const Process = () => {
                     alt="process"
                     src={"/portfolioImages/XWing.jpg"} />
 
-                <div className={`mt-4 ${bottomPadding} mx-6 text-white`}>
+                <div className={`mt-4 ${bottomPadding} mx-6`} style={{color: "#ffffff",}}>
 
                     <div className="backdrop-blur-sm rounded-lg">
                         {/* <h2 className="mx-auto pt-4 w-full font-bold uppercase">{headerText}</h2> */}

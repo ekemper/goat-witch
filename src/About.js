@@ -41,7 +41,7 @@ const About = () => {
     const AboutContent = () => {
         const bottomPadding = `pb-6 sm:pb-10 md:pb-48 lg:pb-72 xl:pb-80`
         return (
-            <div id='aboutContent' className={`mt-4 ${bottomPadding} mx-6 text-white`}>
+            <div id='aboutContent' className={`mt-4 ${bottomPadding} mx-6 text-white`} style={{color: "#ffffff",}}>
 
                 <div className="backdrop-blur-sm rounded-lg px-4">
                     <h4 className="mx-auto pt-4 w-full font-bold uppercase">{headerText}</h4>

@@ -21,11 +21,9 @@ const Header = () => {
     },
   ]
 
-  const [menuOpen, setMenuOpen] = useState(true)
-  const toggleMenu = () => {
-    console.log('called toggle')
-    setMenuOpen(!menuOpen)
-  }
+  const [menuOpen, setMenuOpen] = useState(false)
+
+  const borderClasses = `border-solid border-2 border-black rounded`
 
   const menuClasses = `
     absolute
@@ -34,15 +32,14 @@ const Header = () => {
     z-10 
     flex flex-col 
     w-screen md:w-1/2 xl:w-1/4 
-    border-solid border-2 border-black 
-    rounded`
+    ${borderClasses}`
 
   return (
     <header>
 
       <button className='absolute z-10 h-16 w-16' onClick={() => setMenuOpen(true)}>
         <FontAwesomeIcon icon={faBars} size="2xl" style={{color: "#ffffff",}}/>
-        </button>
+      </button>
 
       {menuOpen && <div className={menuClasses} >
         <div className='flex justify-between'>
@@ -58,10 +55,10 @@ const Header = () => {
             return (
               <button
                 key={item.path}
-                className={`w-auto max-w-1/2 m-6 py-2 text-xl border-solid border-2 border-black rounded`}
+                className={`w-auto max-w-1/2 m-6 py-2 text-xl ${borderClasses}`}
                 style={{"color":"white"}}
                 onClick={() => {
-                  if (menuOpen) toggleMenu()
+                  if (menuOpen) setMenuOpen(false)
                   window.location.hash = item.path
                 }}>
                 <span>{item.text}</span>

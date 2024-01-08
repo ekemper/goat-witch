@@ -40,13 +40,14 @@ const Gallery = () => {
                 {!showMore && !showAllGalleryImages && <button
                     onClick={() => setShowMore(true)}
                     className="w-full 
-                        rounded-none 
                         text-white
                         bg-black
                         font-bold
                         uppercase
                         p-2
-                        my-10">
+                        my-10
+                        border-solid border-2 border-black rounded"
+                    style={{color: "#ffffff",}}>
                     See More!
                 </button>}
             </div>
