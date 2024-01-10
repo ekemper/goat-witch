@@ -9,7 +9,7 @@ const GalleryImage = ({ path }) => {
         <div className="flex md:w-1/3 flex-wrap">
             <div className="w-full p-1 md:p-2">
                 <img
-                    alt="gallery image"
+                    alt="gallery"
                     className="block h-full w-full rounded-lg object-cover object-center"
                     src={path} />
             </div>
@@ -30,7 +30,7 @@ const Gallery = () => {
                     {
                         filePaths.map((path, index) => {
 
-                            if(!showAllGalleryImages && !showMore && index > 2) return 
+                            if(!showAllGalleryImages && !showMore && index > 2) return null
 
                             return <GalleryImage path={path} key={index} />
                         })

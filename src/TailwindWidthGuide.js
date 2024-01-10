@@ -1,4 +1,4 @@
-const TailwingWidthGuide = () => {
+const TailwindWidthGuide = () => {
     return (
         <div className="absolute text-right z-20">
             <h1 className="hidden xs:block mx-4">XS</h1>
@@ -12,4 +12,4 @@ const TailwingWidthGuide = () => {
     )
 }
 
-export default TailwingWidthGuide
+export default TailwindWidthGuide
