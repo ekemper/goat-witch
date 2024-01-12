@@ -21,9 +21,8 @@ const Gallery = ({imageFilePaths}) => {
     const medBreakpoint = '640'
     const showAllImgForDesktop = vw > medBreakpoint
     return (
-        <div className=" pb-8 lg:pb-14">
-            {/* <SectionHeader imgSrc={'/assets/portfolioHeader.png'} altText={'Gallery Header'}/> */}
-            <div className="container mx-auto mt-14 md:mt-36 px-5 py-2 lg:px-32 lg:pt-12">
+        <div className="pb-8 lg:pb-14">
+            <div className="container mx-auto mt-10 md:mt-28 px-5 py-2 lg:px-32 ">
                 <div className="-m-1 flex flex-wrap md:-m-2">
                     {
                         imageFilePaths.map((path, index) => {

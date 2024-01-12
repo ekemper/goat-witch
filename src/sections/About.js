@@ -73,7 +73,7 @@ const About = () => {
         <div id="about" className="bg-[url('../public/assets/bgRockPlant.jpg')] pb-8 lg:pb-14">
 
             <SectionHeader id='about-section' imgSrc={'/assets/aboutHeader.png'} altText={'About Section'} />
-            <div className={`w-4/5 mt-16 md:mt-36 ${aboutColumnClasses}`}>
+            <div className={`w-4/5 mt-16 md:mt-30 ${aboutColumnClasses}`}>
                 <img
                     className="mx-auto rounded-full"
                     alt="Hurray!"
