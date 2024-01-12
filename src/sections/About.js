@@ -30,7 +30,7 @@ const About = () => {
     const MoreText = () => {
         return moreTextParagraphs.map(paragraph => {
             return (
-                <p className="w-4/5 font-bold mx-auto sm:w-3/4 md:mt-4 backdrop-blur-sm" style={{color: "#ffffff",}}>
+                <p className="w-4/5 font-bold mx-auto sm:w-3/4 md:mt-4 backdrop-blur-md" style={{color: "#ffffff",}}>
                     <span className="text-2xl font-bold uppercase">{paragraph.firstBit}</span>
                     {paragraph.rest}
                 </p>
@@ -39,11 +39,11 @@ const About = () => {
     }
 
     const AboutContent = () => {
-        const bottomPadding = `pb-6 sm:pb-10 md:pb-48 lg:pb-72 xl:pb-80`
+        const bottomPadding = `pb-6 sm:pb-10 md:pb-48`
         return (
             <div id='aboutContent' className={`mt-4 ${bottomPadding} mx-6 text-white flex flex-col`} style={{color: "#ffffff",}}>
 
-                <div className="backdrop-blur-sm rounded-lg px-4 xl:mt-20">
+                <div className="backdrop-blur-md rounded-lg px-4 xl:mt-36">
                     <h4 className="mx-auto pt-4 w-full font-bold uppercase">{headerText}</h4>
                     <p className="mx-auto font-bold pb-4 w-full">{bodyText}</p>
                 </div>
@@ -59,7 +59,8 @@ const About = () => {
                         uppercase
                         p-2
                         border-2 border-white
-                        mt-6">
+                        mt-6
+                        backdrop-blur-md">
                     Read More!
                 </button>}
 
@@ -81,7 +82,7 @@ const About = () => {
                 <AboutContent />
             </div>
             {showMoreText &&
-                <div className={`mt-6 pb-8 lg:pb-16 ${aboutColumnClasses} sm:mt-14 backdrop-blur-sm rounded-lg`}>
+                <div className={`mt-6 pb-8 lg:pb-16 ${aboutColumnClasses} backdrop-blur-md rounded-lg`}>
                     <MoreText />
                 </div>
             }

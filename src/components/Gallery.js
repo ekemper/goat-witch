@@ -4,7 +4,7 @@ import { useState } from 'react'
 const GalleryImage = ({ path }) => {
 
     return (
-        <div className="flex md:w-1/3 flex-wrap">
+        <div className="flex mx-auto w-4/5 md:w-1/3 flex-wrap">
             <div className="w-full p-1 md:p-2">
                 <img
                     alt="gallery"
@@ -46,7 +46,8 @@ const Gallery = ({imageFilePaths}) => {
                         uppercase
                         p-2
                         my-10
-                        border-solid border-2 border-black rounded"
+                        border-solid border-2
+                        backdrop-blur-md"
                     style={{color: "#ffffff",}}>
                     See More!
                 </button>}

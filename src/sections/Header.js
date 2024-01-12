@@ -58,7 +58,7 @@ const Header = () => {
         className="z-9 lg:max-w-screen-2xl"
         alt="top border" />
 
-      <button className='z-10 h-16 w-16 lg:absolute lg:top-0' onClick={() => setMenuOpen(true)}>
+      <button className='z-10 h-16 w-16 absolute lg:top-0' onClick={() => setMenuOpen(true)}>
         <FontAwesomeIcon icon={faBars} size="2xl" style={{ color: "#ffffff", }} />
       </button>
 
