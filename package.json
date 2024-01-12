@@ -22,7 +22,7 @@
   },
   "scripts": {
     "start": "node ./scripts/generateImageUrls.js; node ./scripts/handleWidthGuide.js uncomment; react-scripts start",
-    "build": "node ./scripts/generateImageUrls.js; node ./scripts/handleWidthGuide.js comment; react-scripts build",
+    "build": "node ./scripts/handleWidthGuide.js comment; react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
