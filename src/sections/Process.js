@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import SectionHeader from './SectionHeader'
+import SectionHeader from "../components/SectionHeader"
 
 const Process = () => {
 
@@ -35,11 +35,11 @@ const Process = () => {
                 <img
                     className="mx-auto rounded-full"
                     alt="process"
-                    src={"/portfolioImages/XWing.jpg"} />
+                    src={"./FlashImages/XWing.jpg"} />
 
-                <div className={`mt-4 ${bottomPadding} mx-6`} style={{color: "#ffffff",}}>
+                <div className={`mt-4 ${bottomPadding} mx-6 flex flex-col`} style={{color: "#ffffff",}}>
 
-                    <div className="backdrop-blur-sm rounded-lg">
+                    <div className="backdrop-blur-sm rounded-lg xl:mt-20">
                         {/* <h2 className="mx-auto pt-4 w-full font-bold uppercase">{headerText}</h2> */}
                         <p className="text-white font-bold mx-auto sm:w-3/4 md:mt-4 backdrop-blur-sm" >
                             <span className="text-2xl font-bold uppercase">{firstParagraph.firstBit}</span>
@@ -49,13 +49,16 @@ const Process = () => {
 
                     {!showMoreText && <button
                         onClick={() => setShowMoreText(true)}
-                        className=" w-full 
+                        className=" w-3/4
+                                    mx-auto 
                                     rounded-none 
                                     text-white
                                     bg-black
                                     font-bold
                                     uppercase
-                                    p-2">
+                                    p-2
+                                    border-2 border-white
+                                    mt-6">
                         Read More!
                     </button>}
 

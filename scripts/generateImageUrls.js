@@ -1,38 +1,32 @@
-const { exec } = require('child_process');
-const fs = require('fs');
+const util = require('util');
+const exec = util.promisify(require('child_process').exec);
+const fsp = require('fs').promises;
 
-
-handleFiles = (stdout) => {
-
+handleFiles = async (stdout, imgDir) => {
     const files = stdout.split('\n').filter(fileName => fileName.length > 0);
-
-
-    const filePaths = files.map(fileName => `\n'${relativePathForDisplay}/${fileName}'`)
-    console.log(filePaths)
+    const filePaths = files.map(fileName => `\n'/${imgDir}/${fileName}'`)
 
     jsBooger = `const filePaths = [${filePaths}\n]; \nexport default filePaths;`
 
-    fs.writeFile('./ImageFilePaths.js', jsBooger, err => {
-        if (err) {
-            console.error(err);
-        }
-        console.log({jsBooger})
-    });
+    try {
+        await fsp.writeFile(`./src/${imgDir}.js`, jsBooger)
 
-
+    } catch (err) {
+        console.log({ jsBooger })
+        throw err
+    }
 }
 
+const collectImagePathsByDirectory = async imgDir => {
+    const command = `ls ./public/${imgDir}`
+    const { error, stdout, stderr } = await exec(command)
 
-const relativePathForDisplay = `/portfolioImages`
+    if(stderr) console.error(`stderr: ${stderr}`);
+    // console.log(`stdout: ${stdout}`);
+    if (error) throw error
 
-exec(`ls ./public${relativePathForDisplay}`, (error, stdout, stderr) => {
-    if (error) {
-        console.error(`exec error: ${error}`);
-        return;
-    }
-    console.log(`stdout: ${stdout}`);
+    await handleFiles(stdout, imgDir)
+}
 
-    handleFiles(stdout)
-
-    console.error(`stderr: ${stderr}`);
-});
+const imgDirs = [`PortfolioImages`, 'FlashImages']
+imgDirs.map(async dir => await collectImagePathsByDirectory(dir))

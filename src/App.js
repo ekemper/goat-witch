@@ -1,13 +1,16 @@
 import './App.css';
 import React from 'react';
-import Landing from './Landing'
-import About from './About';
-import Gallery from './Gallery';
-import Footer from './Footer';
-import TailwindWidthGuide from "./TailwindWidthGuide"
-import Booking from './Booking';
-import Process from './Process';
-import Header from './Header';
+import Landing from './sections/Landing'
+import About from './sections/About';
+import Footer from './sections/Footer';
+import TailwindWidthGuide from "./components/TailwindWidthGuide"
+import Booking from './sections/Booking';
+import Process from './sections/Process';
+import Faq from './sections/Faq';
+import Flash from './sections/Flash';
+import Header from './sections/Header';
+import Aftercare from './sections/AfterCare';
+import Portfolio from './sections/Portfolio';
 
 if (typeof window !== 'undefined' && process.env.NODE_ENV !== 'production') {
   const ReactDOM = require('react-dom');
@@ -23,9 +26,12 @@ function App() {
         <Header />
         <Landing />
         <About />
+        <Flash/>
+        <Portfolio />
         <Process />
-        <Gallery />
+        <Aftercare/>
         <Booking />
+        <Faq/>
         <Footer />
       </div>
     </main>

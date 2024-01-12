@@ -1,6 +1,4 @@
 
-
-
 const SectionTitle = ({imgSrc, altText}) => {
 
     return <img 

@@ -2,21 +2,24 @@ import React from "react";
 
 const Landing = () => {
 
+    const TagLine = () => {
+        return (
+            <div className="px-16 w-full flex justify-center mt-6">
+                <div style={{ color: "#b9e57d", }} className="font-bold">
+                    Distill your intentions, activate your will. Ritualized tattoos for healing, pleasure, and self actualization.
+                </div>
+            </div>
+        )
+    }
+
     const JumbotronContainerClasses = `
         h-full
         mt-28
         md:flex-row
         md:relative 
         md:mx-auto
-        md:mt-10
-        lg:mt-48`
-    // lg:h-[32rem]
-    // xl:h-[38rem]
-    // 2xl:h-[50rem]
-    // lg:mb-16
-    // xl:mb-40
-    // 2xl:mb-60
-    // `
+        md:mt-20
+        lg:mt-28`
 
     const landingClasses = `
         flex 
@@ -28,13 +31,13 @@ const Landing = () => {
         `
 
     return (
-        <div className={landingClasses}>
+        <div  id='landing' className={landingClasses}>
             <img
                 src={'/assets/headerTopEdge.png'}
                 className="absolute h-20 md:w-full md:h-28 max-w-screen-2xl mx-auto"
                 alt="top border" />
 
-            <div className={JumbotronContainerClasses}>
+            <div id='jumbo' className={JumbotronContainerClasses}>
 
                 <img
                     className="hidden xl:block w-4/5 mx-auto"
@@ -46,6 +49,8 @@ const Landing = () => {
                     src="/assets/stackedHeaderGreenBlack.png"
                     alt="Goat Witch Tattoo" />
 
+                <TagLine />
+
                 <div className="grid grid-cols-2 mx-8 lg:px-36 xl:px-48 2xl:px-60">
                     <img
                         className=""
@@ -53,7 +58,7 @@ const Landing = () => {
                         alt='Skelly Ibex' />
 
                     <button onClick={() => window.location.hash = 'booking'}>
-                        <img src={ '/assets/bookHere.png' } alt="book here" className='max-h-64 m-auto' />
+                        <img src={'/assets/bookHere.png'} alt="book here" className='max-h-64 m-auto' />
                     </button>
                 </div>
 

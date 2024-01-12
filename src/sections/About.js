@@ -1,4 +1,4 @@
-import SectionHeader from "./SectionHeader"
+import SectionHeader from "../components/SectionHeader"
 import { useState } from 'react'
 
 const About = () => {
@@ -30,7 +30,7 @@ const About = () => {
     const MoreText = () => {
         return moreTextParagraphs.map(paragraph => {
             return (
-                <p className="text-white w-4/5 font-bold mx-auto sm:w-3/4 md:mt-4 backdrop-blur-sm" >
+                <p className="w-4/5 font-bold mx-auto sm:w-3/4 md:mt-4 backdrop-blur-sm" style={{color: "#ffffff",}}>
                     <span className="text-2xl font-bold uppercase">{paragraph.firstBit}</span>
                     {paragraph.rest}
                 </p>
@@ -41,21 +41,25 @@ const About = () => {
     const AboutContent = () => {
         const bottomPadding = `pb-6 sm:pb-10 md:pb-48 lg:pb-72 xl:pb-80`
         return (
-            <div id='aboutContent' className={`mt-4 ${bottomPadding} mx-6 text-white`} style={{color: "#ffffff",}}>
+            <div id='aboutContent' className={`mt-4 ${bottomPadding} mx-6 text-white flex flex-col`} style={{color: "#ffffff",}}>
 
-                <div className="backdrop-blur-sm rounded-lg px-4">
+                <div className="backdrop-blur-sm rounded-lg px-4 xl:mt-20">
                     <h4 className="mx-auto pt-4 w-full font-bold uppercase">{headerText}</h4>
                     <p className="mx-auto font-bold pb-4 w-full">{bodyText}</p>
                 </div>
                 {<button
                     onClick={() => setShowMoreText(true)}
-                    className="w-full 
+                    className="
+                        w-3/4 
+                        mx-auto
                         rounded-none 
                         text-white
                         bg-black
                         font-bold
                         uppercase
-                        p-2">
+                        p-2
+                        border-2 border-white
+                        mt-6">
                     Read More!
                 </button>}
 

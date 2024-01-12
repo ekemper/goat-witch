@@ -1,6 +1,4 @@
 
-import filePaths from "./ImageFilePaths.js";
-import SectionHeader from "./SectionHeader.js";
 import { useState } from 'react'
 
 const GalleryImage = ({ path }) => {
@@ -17,27 +15,30 @@ const GalleryImage = ({ path }) => {
     )
 }
 
-const Gallery = () => {
+const Gallery = ({imageFilePaths}) => {
     const [showMore, setShowMore] = useState(false)
     const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
     const medBreakpoint = '640'
-    const showAllGalleryImages = vw > medBreakpoint
+    const showAllImgForDesktop = vw > medBreakpoint
     return (
-        <div id="gallery" className="bg-[url('../public/assets/bgSkullMoss.jpg')] pb-8 lg:pb-14">
-            <SectionHeader imgSrc={'/assets/portfolioHeader.png'} altText={'Gallery Header'}/>
+        <div className=" pb-8 lg:pb-14">
+            {/* <SectionHeader imgSrc={'/assets/portfolioHeader.png'} altText={'Gallery Header'}/> */}
             <div className="container mx-auto mt-14 md:mt-36 px-5 py-2 lg:px-32 lg:pt-12">
                 <div className="-m-1 flex flex-wrap md:-m-2">
                     {
-                        filePaths.map((path, index) => {
+                        imageFilePaths.map((path, index) => {
+                            const dontShowThatImage = !showAllImgForDesktop 
+                                && !showMore 
+                                && index > 2
 
-                            if(!showAllGalleryImages && !showMore && index > 2) return null
+                            if(dontShowThatImage) return null
 
                             return <GalleryImage path={path} key={index} />
                         })
                     }
                 </div>
 
-                {!showMore && !showAllGalleryImages && <button
+                {!showMore && !showAllImgForDesktop && <button
                     onClick={() => setShowMore(true)}
                     className="w-full 
                         text-white

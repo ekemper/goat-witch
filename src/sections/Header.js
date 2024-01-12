@@ -12,14 +12,39 @@ const Header = () => {
       text: 'About'
     },
     {
-      path: 'gallery',
-      text: 'Gallery'
+      path: 'flash',
+      text: 'Flash'
+    },
+    {
+      path: 'portfolio',
+      text: 'Portfolio'
+    },
+    {
+      path: 'process',
+      text: 'Process'
+    },
+    {
+      path: 'aftercare',
+      text: 'Aftercare'
     },
     {
       path: 'booking',
       text: 'Booking'
     },
+    {
+      path: 'faq',
+      text: 'FAQ'
+    },
   ]
+
+  // About
+// Flash
+// Portfolio 
+// Process 
+// Aftercare
+// Book Here
+// FAQ
+
 
   const [menuOpen, setMenuOpen] = useState(false)
 
