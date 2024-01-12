@@ -37,15 +37,6 @@ const Header = () => {
     },
   ]
 
-  // About
-// Flash
-// Portfolio 
-// Process 
-// Aftercare
-// Book Here
-// FAQ
-
-
   const [menuOpen, setMenuOpen] = useState(false)
 
   const borderClasses = `border-solid border-2 border-black rounded`
@@ -60,19 +51,24 @@ const Header = () => {
     ${borderClasses}`
 
   return (
-    <header>
+    <header className='fixed z-50'>
 
-      <button className='absolute z-10 h-16 w-16' onClick={() => setMenuOpen(true)}>
-        <FontAwesomeIcon icon={faBars} size="2xl" style={{color: "#ffffff",}}/>
+      <img
+        src={'/assets/headerTopEdge.png'}
+        className="z-9 lg:max-w-screen-2xl"
+        alt="top border" />
+
+      <button className='z-10 h-16 w-16 lg:absolute lg:top-0' onClick={() => setMenuOpen(true)}>
+        <FontAwesomeIcon icon={faBars} size="2xl" style={{ color: "#ffffff", }} />
       </button>
 
       {menuOpen && <div className={menuClasses} >
         <div className='flex justify-between'>
-          <h1 className='mx-6 mt-6 py-2 text-xl' style={{"color":"white"}}>
+          <h1 className='mx-6 mt-6 py-2 text-xl' style={{ "color": "white" }}>
             MENU
           </h1>
           <button className='' onClick={() => setMenuOpen(false)}>
-            <FontAwesomeIcon icon={faCircleXmark} size="2xl" style={{color: "#ffffff",}} className='mt-6 mx-6'/>
+            <FontAwesomeIcon icon={faCircleXmark} size="2xl" style={{ color: "#ffffff", }} className='mt-6 mx-6' />
           </button>
         </div>
         {
@@ -81,7 +77,7 @@ const Header = () => {
               <button
                 key={item.path}
                 className={`w-auto max-w-1/2 m-6 py-2 text-xl ${borderClasses}`}
-                style={{"color":"white"}}
+                style={{ "color": "white" }}
                 onClick={() => {
                   if (menuOpen) setMenuOpen(false)
                   window.location.hash = item.path

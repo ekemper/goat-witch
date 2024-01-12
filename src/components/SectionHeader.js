@@ -6,7 +6,7 @@ const SectionHeader = ({ imgSrc, altText }) => {
 
     return (<>
         <ScrollSpySpacer />
-        <div className="h-20"></div>
+        <div className="h-28"></div>
         <SectionTitle imgSrc={imgSrc} altText={altText} />
     </>)
 }
