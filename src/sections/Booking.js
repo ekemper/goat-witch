@@ -3,10 +3,6 @@ import SectionHeader from "../components/SectionHeader"
 import { InlineWidget } from "react-calendly";
 
 const Booking = () => {
-
-
-
-    // const {intakeSubmitted, setIntakeSubmitted} = useState(false)
   
     return (
         <div id="booking" className=" bg-[url('../public/assets/bgRockPlant.jpg')] pb-8">
