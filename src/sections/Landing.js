@@ -37,7 +37,7 @@ const Landing = () => {
 
                 <img
                     className="hidden xl:block w-4/5 mx-auto"
-                    src="/assets/BrandHeaderXl.PNG"
+                    src="/assets/test-output.png"
                     alt="Goat Witch Tattoo" />
 
                 <img
