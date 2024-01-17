@@ -3,7 +3,7 @@ import React from 'react';
 import Landing from './sections/Landing'
 import About from './sections/About';
 import Footer from './sections/Footer';
-import TailwindWidthGuide from "./components/TailwindWidthGuide"
+// import TailwindWidthGuide from "./components/TailwindWidthGuide"
 import Booking from './sections/Booking';
 import Process from './sections/Process';
 import Faq from './sections/Faq';
@@ -22,7 +22,7 @@ function App() {
   return (
     <main className="bg-grayGreenBackground">
       <div className=' max-w-screen-2xl mx-auto'>
-        <TailwindWidthGuide />
+        {/* <TailwindWidthGuide /> */}
         <Header />
         <Landing />
         <About />
