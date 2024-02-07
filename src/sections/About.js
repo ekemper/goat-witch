@@ -4,8 +4,10 @@ import { useState } from 'react'
 const About = () => {
 
     const headerText = `Hi, my name is Carlyn!`
-    const bodyText = `I’m a Colorado-born artist with a deep love for people, animals, plants and the land. 
-        I am transmasculine gender-gueer and prefer they/them pronouns.`
+    const bodyText = `I am a Colorado-born tattoo artist with a deep love for people, animals, plants, and the land. I make illustrative tattoos as well as hold ritual tattooing sessions. 
+
+    My mission is to weave transformative magic into every tattoo, creating visually stunning body art that empowers wearers to heal within and evolve into their best selves. Guided by compassion, I connect deeply with my patrons in creative ritual. Together, we craft symbols that not only adorn the skin, but also spark inner growth and restoration, casting spells for journeys of bodily enjoyment and holistic well-being.
+    `
 
     const moreTextParagraphs = [
         { firstBit: `I have loved `, rest: `drawing since I was young and completed my BFA at the School of the Art Institute of Chicago.` },

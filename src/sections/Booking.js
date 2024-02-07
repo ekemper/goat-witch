@@ -17,7 +17,7 @@ const Booking = () => {
             </iframe>
 
             <div className="m-6 mt-10 w-4/5 md:w-3/4 lg:w-1/2 m-auto">
-                <InlineWidget url="https://calendly.com/edwardkemper" />
+                <InlineWidget url="https://calendly.com/goatwitchtatoo" />
             </div>
         </div>
     )
