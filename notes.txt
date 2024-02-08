@@ -1,0 +1,7 @@
+https://goatwitchtattoo.s3-us-west-2.amazonaws.com/<object name>
+
+
+https://dc7iy7pp2z4kr.cloudfront.net/PortfolioImages/IMG_0253.jpg
+
+
+for the main run cmd : `node ./scripts/generateImageUrls.js; `
