@@ -30,7 +30,7 @@ const Process = () => {
     return (
         <div id="process" className="bg-[url('../public/assets/resized/bgBugPaper.jpg')] pb-8 lg:pb-14">
             
-            <SectionHeader imgSrc={'/assets/processHeader.png'} altText={'Process'} />
+            <SectionHeader imgSrc={'/assets/rawImages/processHeader.png'} altText={'Process'} />
             <div className={`w-4/5 mt-16 md:mt-36 ${processColumnClasses}`}>
                 <img
                     className="mx-auto rounded-full"

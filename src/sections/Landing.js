@@ -25,8 +25,8 @@ const Landing = () => {
         flex 
         justify-center 
         h-full 
-        bg-[url('../public/assets/bgSkullMoss.jpg')]
-        xl:bg-[url('../public/assets/bgMountainsLanding.png')]
+        bg-[url('../public/assets/resized/bgSkullMoss.jpg')]
+        xl:bg-[url('../public/assets/resized/bgMountainsLanding.png')]
 
         `
 
@@ -37,12 +37,12 @@ const Landing = () => {
 
                 <img
                     className="hidden xl:block w-4/5 mx-auto"
-                    src="/assets/BrandHeaderXl.PNG"
+                    src="/assets/rawImages/BrandHeaderXl.PNG"
                     alt="Goat Witch Tattoo" />
 
                 <img
                     className="block xl:hidden w-4/5 mx-auto sm:w-1/2"
-                    src="/assets/stackedHeaderGreenBlack.png"
+                    src="/assets/rawImages/stackedHeaderGreenBlack.png"
                     alt="Goat Witch Tattoo" />
 
                 <TagLine />
@@ -50,11 +50,11 @@ const Landing = () => {
                 <div className="grid grid-cols-2 mx-8 lg:px-36 xl:px-48 2xl:px-60">
                     <img
                         className=""
-                        src={'/assets/ibexTransparent.png'}
+                        src={'/assets/rawImages/ibexTransparent.png'}
                         alt='Skelly Ibex' />
 
                     <button onClick={() => window.location.hash = 'booking'}>
-                        <img src={'/assets/bookHere.png'} alt="book here" className='max-h-64 m-auto' />
+                        <img src={'/assets/rawImages/bookHere.png'} alt="book here" className='max-h-64 m-auto' />
                     </button>
                 </div>
 

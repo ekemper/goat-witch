@@ -1,13 +1,13 @@
 const sharp = require('sharp');
 
 const backgroundImageInfo = [
-    { rawImagePath: 'public/assets/bgBugPaper.jpg', imageName: 'bgBugPaper.jpg' },
-    { rawImagePath: 'public/assets/bgDeadBird.jpg', imageName: 'bgDeadBird.jpg' },
-    { rawImagePath: 'public/assets/bgMountainsLanding.png', imageName: 'bgMountainsLanding.png' },
-    { rawImagePath: 'public/assets/bgRockPlant.jpg', imageName: 'bgRockPlant.jpg' },
-    { rawImagePath: 'public/assets/bgSkullMoss.jpg', imageName: 'bgSkullMoss.jpg' },
-    { rawImagePath: 'public/assets/sectionDivider.png', imageName: 'sectionDivider.png' },
-    { rawImagePath: 'public/assets/headerTopEdge.png', imageName: 'headerTopEdge.png' }
+    { rawImagePath: 'public/assets/rawImages/bgBugPaper.jpg', imageName: 'bgBugPaper.jpg' },
+    { rawImagePath: 'public/assets/rawImages/bgDeadBird.jpg', imageName: 'bgDeadBird.jpg' },
+    { rawImagePath: 'public/assets/rawImages/bgMountainsLanding.png', imageName: 'bgMountainsLanding.png' },
+    { rawImagePath: 'public/assets/rawImages/bgRockPlant.jpg', imageName: 'bgRockPlant.jpg' },
+    { rawImagePath: 'public/assets/rawImages/bgSkullMoss.jpg', imageName: 'bgSkullMoss.jpg' },
+    { rawImagePath: 'public/assets/rawImages/sectionDivider.png', imageName: 'sectionDivider.png' },
+    { rawImagePath: 'public/assets/rawImages/headerTopEdge.png', imageName: 'headerTopEdge.png' }
 ]
 
 

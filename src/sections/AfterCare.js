@@ -15,8 +15,8 @@ const paragraphs = [
 
 const Aftercare = () => {
     return (
-        <div id="aftercare" className="bg-[url('../public/assets/bgRockPlant.jpg')] pb-8 lg:pb-14">
-            <SectionHeader imgSrc={'./assets/aftercareHeader.png'} altText={'Aftercare Section'} />
+        <div id="aftercare" className="bg-[url('../public/assets/resized/bgRockPlant.jpg')] pb-8 lg:pb-14">
+            <SectionHeader imgSrc={'./assets/rawImages/aftercareHeader.png'} altText={'Aftercare Section'} />
 
             <div className="font-bold mx-auto w-4/5 sm:w-3/4 mt-4 lg:w-2/3 backdrop-blur-md p-6 rounded-lg">
 

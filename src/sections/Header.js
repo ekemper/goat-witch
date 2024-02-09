@@ -6,6 +6,9 @@ import { faCircleXmark, faBars } from '@fortawesome/free-solid-svg-icons'
 
 const Header = () => {
 
+  const menuPrimaryColor = `#b9e57d`
+  const menuSecondaryColor = `#291c45`
+
   const linkItems = [
     {
       path: 'about',
@@ -43,6 +46,8 @@ const Header = () => {
 
   const menuClasses = `
     absolute
+    top-0
+    overflow-scroll
     bg-grayGreenBackground 
     w-xl 
     z-10 
@@ -54,7 +59,7 @@ const Header = () => {
     <header className='fixed z-50'>
 
       <img
-        src={'/assets/headerTopEdge.png'}
+        src={'/assets/resized/headerTopEdge.png'}
         className="z-9 lg:max-w-screen-2xl"
         alt="top border" />
 
@@ -64,11 +69,11 @@ const Header = () => {
 
       {menuOpen && <div className={menuClasses} >
         <div className='flex justify-between'>
-          <h1 className='mx-6 mt-6 py-2 text-xl' style={{ "color": "white" }}>
+          <h1 className='mx-6 mt-6 py-2 text-xl' style={{ "color": menuPrimaryColor }}>
             MENU
           </h1>
           <button className='' onClick={() => setMenuOpen(false)}>
-            <FontAwesomeIcon icon={faCircleXmark} size="2xl" style={{ color: "#ffffff", }} className='mt-6 mx-6' />
+            <FontAwesomeIcon icon={faCircleXmark} size="2xl" style={{ color: menuPrimaryColor, }} className='mt-6 mx-6' />
           </button>
         </div>
         {
@@ -76,8 +81,8 @@ const Header = () => {
             return (
               <button
                 key={item.path}
-                className={`w-auto max-w-1/2 m-6 py-2 text-xl ${borderClasses}`}
-                style={{ "color": "white" }}
+                className={`w-auto max-w-1/2 mx-6 my-2 py-2 text-xl ${borderClasses}`}
+                style={{ "color": menuPrimaryColor, "border-color": menuSecondaryColor }}
                 onClick={() => {
                   if (menuOpen) setMenuOpen(false)
                   window.location.hash = item.path

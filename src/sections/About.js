@@ -73,14 +73,14 @@ const About = () => {
     const aboutColumnClasses = `mx-auto md:grid md:grid-cols-2 max-w-5xl`
 
     return (
-        <div id="about" className="bg-[url('../public/assets/bgRockPlant.jpg')] pb-8 lg:pb-14">
+        <div id="about" className="bg-[url('../public/assets/resized/bgRockPlant.jpg')] pb-8 lg:pb-14">
 
-            <SectionHeader id='about-section' imgSrc={'/assets/aboutHeader.png'} altText={'About Section'} />
+            <SectionHeader id='about-section' imgSrc={'/assets/rawImages/aboutHeader.png'} altText={'About Section'} />
             <div className={`w-4/5 mt-16 md:mt-30 ${aboutColumnClasses}`}>
                 <img
                     className="mx-auto rounded-full"
                     alt="Hurray!"
-                    src={"/assets/about-small.jpg"} />
+                    src={"/assets/rawImages/about-small.jpg"} />
                 <AboutContent />
             </div>
             {showMoreText &&

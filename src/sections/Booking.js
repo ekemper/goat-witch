@@ -5,8 +5,8 @@ import { InlineWidget } from "react-calendly";
 const Booking = () => {
   
     return (
-        <div id="booking" className=" bg-[url('../public/assets/bgRockPlant.jpg')] pb-8">
-            <SectionHeader imgSrc={'./assets/aboutHeader.png'} altText={'Booking Section'} />
+        <div id="booking" className=" bg-[url('../public/assets/resized/bgRockPlant.jpg')] pb-8">
+            <SectionHeader imgSrc={'./assets/rawImages/Booking.png'} altText={'Booking Section'} />
             
             <iframe 
                 title="stupid google form iframe"
