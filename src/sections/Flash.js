@@ -1,6 +1,6 @@
-import SectionHeader from "../components/SectionHeader"
-import imageFilePaths from "../FlashImages.js";
-import Gallery from "../components/Gallery.js";
+import SectionHeader from "components/SectionHeader"
+import imageFilePaths from "FlashImages.js";
+import Gallery from "components/Gallery.js";
 
 const Flash = () => {
     return (

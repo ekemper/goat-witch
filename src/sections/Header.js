@@ -6,6 +6,16 @@ import { faCircleXmark, faBars } from '@fortawesome/free-solid-svg-icons'
 
 const Header = () => {
 
+  const [showHeaderBrandImage, setShowHeaderBrandImage] = useState(false)
+
+  document.addEventListener("scroll", (event) => {
+    if (window.scrollY > 200) {
+      setShowHeaderBrandImage(true)
+    } else {
+      setShowHeaderBrandImage(false)
+    }
+  });
+
   const menuPrimaryColor = `#b9e57d`
   const menuSecondaryColor = `#291c45`
 
@@ -56,24 +66,36 @@ const Header = () => {
     ${borderClasses}`
 
   return (
-    <header className='fixed z-50'>
+    <header className='fixed z-50 '>
 
       <img
         src={'/assets/resized/headerTopEdge.png'}
-        className="z-9 lg:max-w-screen-2xl"
+        className="z-9 lg:max-w-screen-2xl xl:mt-[-50px]"
         alt="top border" />
 
       <button className='z-10 h-16 w-16 absolute lg:top-0' onClick={() => setMenuOpen(true)}>
-        <FontAwesomeIcon icon={faBars} size="2xl" style={{ color: "#ffffff", }} />
+        <FontAwesomeIcon icon={faBars} size="2xl" style={{ color: "#d96563", }} />
       </button>
+
+      {/* {showHeaderBrandImage && <img
+        className="hidden xl:block w-[200px]"
+        src="/assets/rawImages/BrandHeaderXl.PNG"
+        alt="Goat Witch Tattoo" />}
+
+      {showHeaderBrandImage && <button onClick={() => window.location.hash = 'booking'}>
+        <img 
+          src={'/assets/rawImages/bookHere.png'} 
+          alt="book here" 
+          className='max-h-48 m-auto hidden xl:block w-[80px]' />
+      </button>} */}
 
       {menuOpen && <div className={menuClasses} >
         <div className='flex justify-between'>
-          <h1 className='mx-6 mt-6 py-2 text-xl' style={{ "color": menuPrimaryColor }}>
+          <h1 className='mx-6 mt-6 py-2 text-xl' style={{ "color": '#d96563' }}>
             MENU
           </h1>
           <button className='' onClick={() => setMenuOpen(false)}>
-            <FontAwesomeIcon icon={faCircleXmark} size="2xl" style={{ color: menuPrimaryColor, }} className='mt-6 mx-6' />
+            <FontAwesomeIcon icon={faCircleXmark} size="2xl" style={{ color: "#d96563", }} className='mt-6 mx-6' />
           </button>
         </div>
         {
@@ -82,7 +104,7 @@ const Header = () => {
               <button
                 key={item.path}
                 className={`w-auto max-w-1/2 mx-6 my-2 py-2 text-xl ${borderClasses}`}
-                style={{ "color": menuPrimaryColor, "border-color": menuSecondaryColor }}
+                style={{ "color": menuPrimaryColor, "borderColor": menuSecondaryColor }}
                 onClick={() => {
                   if (menuOpen) setMenuOpen(false)
                   window.location.hash = item.path

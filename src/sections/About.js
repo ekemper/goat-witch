@@ -1,39 +1,28 @@
-import SectionHeader from "../components/SectionHeader"
+import SectionHeader from "components/SectionHeader"
 import { useState } from 'react'
 
 const About = () => {
 
     const headerText = `Hi, my name is Carlyn!`
-    const bodyText = `I am a Colorado-born tattoo artist with a deep love for people, animals, plants, and the land. I make illustrative tattoos as well as hold ritual tattooing sessions. 
-
-    My mission is to weave transformative magic into every tattoo, creating visually stunning body art that empowers wearers to heal within and evolve into their best selves. Guided by compassion, I connect deeply with my patrons in creative ritual. Together, we craft symbols that not only adorn the skin, but also spark inner growth and restoration, casting spells for journeys of bodily enjoyment and holistic well-being.
-    `
+    const bodyText = `I am a Colorado-born tattoo artist with a deep love for people, animals, plants, and the land. I make illustrative tattoos and hold ritual tattooing sessions.`
 
     const moreTextParagraphs = [
-        { firstBit: `I have loved `, rest: `drawing since I was young and completed my BFA at the School of the Art Institute of Chicago.` },
+        { firstBit: `My mission `, rest: ` is to weave transformative magic into every tattoo, creating visually stunning body art that empowers wearers to celebrate milestones, honor past loved ones, heal within and evolve into their best selves.` },
 
-        { firstBit: `Tattooing `, rest: `was initially an informal practice for me, holding stick-and-poke parties for my friends in the metal and punk scene starting in 2017. This progressed to the point where my friends began to convince me I should become a professional artist. For me, tattooing has always been about sharing a creative experience that nurtures connection with the community.` },
+        { firstBit: `Guided by compassion`, rest: `, I connect deeply with my patrons in creative ritual. Together, we craft symbols that not only adorn the skin, but also spark inner growth and restoration, casting spells for journeys of bodily enjoyment and holistic well-being.` },
 
-        { firstBit: `I began using a machine `, rest: `for body art in the summer of 2023 and am currently seeking apprenticeship and a workspace at an established studio. At this point in my evolution, etching and engraving blackwork is my favorite style to work in. I hold a current certificate from the OSHA Bloodborne Pathogens Training for Body Artist course.` },
+        { firstBit: `I studied `, rest: ` scientific illustration and printmaking throughout my BFA at the School of the Art Institute of Chicago. I hold a MSci in Outdoor Education from the University of Edinburgh. I am a part time outdoor educator and guide for Denver Mountain Guiding and She Sends Collective.` },
 
-        { firstBit: `I hold agnostic beliefs, `, rest: `and highly value ritual and ceremonial practices for the proven beneficial impacts they have for regulating our emotions, creating performance goal states, and enhancing our social connections.` },
-
-        { firstBit: `As a practitioner, `, rest: `I am keen to offer sigil magic, memorial processing and rite of passage tattoos. My process is trauma informed, and is customized to the needs and desires of each individual.` },
-
-        { firstBit: `In general `, rest: `we will begin with some journaling prompts, conversations and tarot readings to help discover and specify your desires. We will then design a tattoo to be imbued with those intentions and cast a sacred space for the reception of your markings.` },
-
-        { firstBit: `I admire mountain goats `, rest: `for their incredible surefootedness, stubborn mischievousness and hardy survivability. In my other career, I am a rock climbing instructor and coach who feels most alive perched or clinging up high on remote alpine cliffs.` },
-
-        { firstBit: `Land Acknowledgement: `, rest: `My home studio is on the unceded land of the Ute, Arapaho, and Cheyenne communities. As a white descendant of European settlers, I systemically benefit from colonization, the institution of slavery and the oppression of people of color. If you are African American, Native American, or are a person of color and you desire grants or discounts for your desired tattoo, please make a note in your Tattoo Request Form(insert link here).` }
+        { firstBit: `When `, rest: ` I’m not making art or magic, you can find me hanging out on rocky cliffs with my favorite folks, practicing yoga, and studying power relations.` },
     ]
 
-    const [showMoreText, setShowMoreText] = useState(false)
+    const [showMoreText, setShowMoreText] = useState(true)
 
     const MoreText = () => {
         return moreTextParagraphs.map(paragraph => {
             return (
-                <p className="w-4/5 font-bold mx-auto sm:w-3/4 md:mt-4 backdrop-blur-md" style={{color: "#ffffff",}}>
-                    <span className="text-2xl font-bold uppercase">{paragraph.firstBit}</span>
+                <p className="w-4/5 font-bold mx-auto sm:w-3/4 md:mt-4 backdrop-blur-lg" key={paragraph.firstBit} style={{color: "#ffffff",}}>
+                    <span className="text-2xl font-bold uppercase xl:pt-12">{paragraph.firstBit}</span>
                     {paragraph.rest}
                 </p>
             )
@@ -45,11 +34,11 @@ const About = () => {
         return (
             <div id='aboutContent' className={`mt-4 ${bottomPadding} mx-6 text-white flex flex-col`} style={{color: "#ffffff",}}>
 
-                <div className="backdrop-blur-md rounded-lg px-4 xl:mt-36">
-                    <h4 className="mx-auto pt-4 w-full font-bold uppercase">{headerText}</h4>
+                <div className="backdrop-blur-lg rounded-lg px-4 xl:mt-36">
+                    <h4 className="mx-auto pt-4 w-full text-2xl font-bold uppercase">{headerText}</h4>
                     <p className="mx-auto font-bold pb-4 w-full">{bodyText}</p>
                 </div>
-                {<button
+                {/* {<button
                     onClick={() => setShowMoreText(true)}
                     className="
                         w-3/4 
@@ -62,9 +51,9 @@ const About = () => {
                         p-2
                         border-2 border-white
                         mt-6
-                        backdrop-blur-md">
+                        backdrop-blur-lg">
                     Read More!
-                </button>}
+                </button>} */}
 
             </div>
         )
@@ -84,7 +73,7 @@ const About = () => {
                 <AboutContent />
             </div>
             {showMoreText &&
-                <div className={`mt-6 pb-8 lg:pb-16 ${aboutColumnClasses} backdrop-blur-md rounded-lg`}>
+                <div className={`mt-6 pb-8 lg:pb-16 ${aboutColumnClasses} backdrop-blur-lg rounded-lg`}>
                     <MoreText />
                 </div>
             }

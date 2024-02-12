@@ -1,7 +1,7 @@
-import SectionHeader from "../components/SectionHeader.js"
+import SectionHeader from "components/SectionHeader.js"
 
-import Gallery from "../components/Gallery.js";
-import imageFilePaths from "../PortfolioImages.js";
+import Gallery from "components/Gallery.js";
+import imageFilePaths from "PortfolioImages.js";
 const Portfolio = () => {
     return (
         <div 

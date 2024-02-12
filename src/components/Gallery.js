@@ -47,7 +47,7 @@ const Gallery = ({imageFilePaths}) => {
                         p-2
                         my-10
                         border-solid border-2
-                        backdrop-blur-md"
+                        backdrop-blur-lg"
                     style={{color: "#ffffff",}}>
                     See More!
                 </button>}

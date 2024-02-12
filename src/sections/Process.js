@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import SectionHeader from "../components/SectionHeader"
+import SectionHeader from "components/SectionHeader"
 
 const Process = () => {
 
